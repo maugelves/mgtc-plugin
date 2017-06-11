@@ -21,17 +21,6 @@ define( 'MGTC_URL', plugins_url() . '/' . MGTC_FOLDER );
 include (MGTC_PATH . "/inc/base.php");
 
 
-
-/*
-*   =================================================================================================
-*   INCLUDE ACF PLUGIN
-*   =================================================================================================
-*/
-
-
-
-
-
 /*
 *   =================================================================================================
 *   CUSTOM POST TYPES
@@ -54,3 +43,28 @@ foreach (glob(__DIR__ . "/inc/cpts/*.php") as $filename)
 */
 foreach (glob(__DIR__ . "/inc/acfs/*.php") as $filename)
 	include $filename;
+
+
+
+/*
+*   =================================================================================================
+*   ACTIVATE/DEACTIVE
+*   =================================================================================================
+*/
+
+register_activation_hook(__FILE__ , 'create_categories_terms' );
+/**
+ * Create by default "Actor, Director, Producción, Comunicación" terms
+ */
+function create_categories_terms() {
+
+	if( !term_exists('Director', 'category' ) )
+		wp_insert_term('Director', 'category');
+
+	if( !term_exists('Actor', 'category' ) )
+		wp_insert_term('Actor', 'category');
+
+	if( !term_exists('Producción', 'category' ) )
+		wp_insert_term('Producción', 'category');
+
+}

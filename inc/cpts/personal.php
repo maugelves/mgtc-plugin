@@ -60,7 +60,11 @@ class Personal
 				'not_found'             => __( 'No se encontraron personas', 'mgtc' ),
 				'not_found_in_trash'    => __( 'No hay registros eliminados', 'mgtc' ),
 				'all_items'             => __( 'Todas las personas', 'mgtc' ),
-				'archives'              => __( 'Personas', 'mgtc ' )
+				'archives'              => __( 'Personas', 'mgtc ' ),
+				'featured_image'        => __( 'Foto principal del actor'),
+				'set_featured_image'    => __( 'Establecer la foto principal'),
+				'remove_featured_image' => __( 'Quitar la foto principal ' ),
+				'use_featured_image'    => __( 'Usar esta foto como principal' )
 
 			),
 			'public'                => true,
@@ -68,7 +72,7 @@ class Personal
 			'show_ui'               => true,
 			'menu_position'         => 12,
 			'menu_icon'             => 'dashicons-universal-access',
-			'supports'              => array( 'title' ),
+			'supports'              => array( 'title', 'thumbnail' ),
 			'taxonomies'            => array( 'category' ),
 			'has_archive'           => true
 		);

@@ -67,4 +67,7 @@ function create_categories_terms() {
 	if( !term_exists('Producción', 'category' ) )
 		wp_insert_term('Producción', 'category');
 
+	if( !term_exists('Distribución', 'category' ) )
+		wp_insert_term('Distribución', 'category');
+
 }

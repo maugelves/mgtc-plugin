@@ -57,7 +57,11 @@ class Obras
 				'not_found'             => __( 'No se encontraron obras', 'mgtc' ),
 				'not_found_in_trash'    => __( 'No hay registros eliminados', 'mgtc' ),
 				'all_items'             => __( 'Todas las obras', 'mgtc' ),
-				'archives'              => __( 'Obras', 'mgtc ' )
+				'archives'              => __( 'Obras', 'mgtc ' ),
+				'featured_image'        => __( 'Poster de la obra'),
+				'set_featured_image'    => __( 'Establecer el poster'),
+				'remove_featured_image' => __( 'Quitar el poster' ),
+				'use_featured_image'    => __( 'Usar este poster como principal' )
 
 			),
 			'public'                => true,
@@ -65,7 +69,7 @@ class Obras
 			'show_ui'               => true,
 			'menu_position'         => 12,
 			'menu_icon'             => MGTC_URL . "/assets/images/theatre-icon.png",
-			'supports'              => array( 'title', 'editor' ),
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
 			'has_archive'           => true
 		);
 

@@ -13,11 +13,17 @@ class Personal
 	 * Personal constructor.
 	 */
 	public function __construct() {
-		add_action( 'init', array( $this, 'create_cpt_personal' ) );
+		add_action( 'init', array( $this, 'create_cpt_personal' ), 10 );
+		register_activation_hook( __FILE__, array( $this, 'create_categories_terms' ) );
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 	}
 
-
+	/**
+	 *  Change the Post Title placeholder
+	 *  @param $title
+	 *
+	 *  @return string|void
+	 */
 	public function change_title_placeholder( $title ) {
 		$screen = get_current_screen();
 
@@ -26,6 +32,23 @@ class Personal
 
 
 		return $title;
+	}
+
+
+	/**
+	 * Create by default "Actor, Director, Producción, Comunicación" terms
+	 */
+	public function create_categories_terms() {
+
+		if( !term_exists('Director', 'category' ) );
+			wp_insert_term('Director', 'category');
+
+		if( !term_exists('Actor', 'category' ) );
+			wp_insert_term('Actor', 'category');
+
+		if( !term_exists('Producción', 'category' ) );
+			wp_insert_term('Actor', 'category');
+
 	}
 
 
@@ -60,8 +83,8 @@ class Personal
 			'show_ui'               => true,
 			'menu_position'         => 12,
 			'menu_icon'             => 'dashicons-universal-access',
-			'supports'              => array( 'title', 'excerpt' ),
-			'taxonomies'            => array(),
+			'supports'              => array( 'title' ),
+			'taxonomies'            => array( 'category' ),
 			'has_archive'           => true
 		);
 

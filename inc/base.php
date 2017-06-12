@@ -5,16 +5,12 @@ class MGTC_Base
 
 	public function __construct()
 	{
-		$this->loadPluginTextDomain();
+		add_action( 'plugins_loaded', array( $this, 'loadPluginTextDomain' ) );
 		$this->registerScripts();
-		$this->removePluginUpdates();
 
 	}
 
 	public function loadPluginTextDomain() {
-		add_action( 'plugins_loaded', array( $this, 'loadPluginTextDomainCallBack' ) );
-	}
-	public function loadPluginTextDomainCallBack() {
 		load_plugin_textdomain( 'mgtc', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 	}
 
@@ -26,12 +22,10 @@ class MGTC_Base
 	}
 
 	public function registerJSScripts( $hook ) {
-		wp_enqueue_script( 'jquery' );
+
 	}
 
 	public function registerCSSScripts( $hook ) {
-		// Enqueue Style
-		//wp_enqueue_style('attendees-application-css', WPH_ATTENDEES_URL.'/assets/css/style.css', array(), false);
 	}
 
 	public function registerJSadminScripts( $hook ) {
@@ -40,15 +34,25 @@ class MGTC_Base
 	public function registerCSSadminScripts( $hook ) {
 	}
 
-	function removePluginUpdates(){
-		add_filter('site_transient_update_plugins', array( $this, 'removePluginUpdatesCallback' ), 10, 1);
+	public static function activePlugin(){
+
+		// Create Roles taxonomy if not exists
+		Personal::create_roles_taxonomy();
+
+		if( !term_exists('Director', 'roles' ) )
+			wp_insert_term('Director', 'roles');
+
+		if( !term_exists('Actor', 'roles' ) )
+			wp_insert_term('Actor', 'roles');
+
+		if( !term_exists('Producción', 'roles' ) )
+			wp_insert_term('Producción', 'roles');
+
+		if( !term_exists('Distribución', 'roles' ) )
+			wp_insert_term('Distribución', 'roles');
+
 	}
-	function removePluginUpdatesCallback($value) {
-		if (!empty($value) && is_object($value) && !isset($value->response[ plugin_basename(__FILE__) ])){
-			unset($value->response[ plugin_basename(__FILE__) ]);
-		}
-		return $value;
-	}
+
 
 }
 

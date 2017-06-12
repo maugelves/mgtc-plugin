@@ -46,28 +46,10 @@ foreach (glob(__DIR__ . "/inc/acfs/*.php") as $filename)
 
 
 
+
 /*
 *   =================================================================================================
-*   ACTIVATE/DEACTIVE
+*   ACTIVATE PLUGIN FUNCTIONS
 *   =================================================================================================
 */
-
-register_activation_hook(__FILE__ , 'create_categories_terms' );
-/**
- * Create by default "Actor, Director, Producción, Comunicación" terms
- */
-function create_categories_terms() {
-
-	if( !term_exists('Director', 'category' ) )
-		wp_insert_term('Director', 'category');
-
-	if( !term_exists('Actor', 'category' ) )
-		wp_insert_term('Actor', 'category');
-
-	if( !term_exists('Producción', 'category' ) )
-		wp_insert_term('Producción', 'category');
-
-	if( !term_exists('Distribución', 'category' ) )
-		wp_insert_term('Distribución', 'category');
-
-}
+register_activation_hook( __FILE__, array( 'MGTC_Base', 'activePlugin' ) );

@@ -45,7 +45,7 @@ class Obras
 			'labels'                => array (
 
 				// Labels values
-				'name'                  => __( 'Obra', 'mgtc' ),
+				'name'                  => __( 'Obras', 'mgtc' ),
 				'singular'              => __( 'Obra', 'mgtc' ),
 				'add_new'               => __( 'Agregar una obra', 'mgtc' ),
 				'add_new_item'          => __( 'Agregar una obra', 'mgtc' ),

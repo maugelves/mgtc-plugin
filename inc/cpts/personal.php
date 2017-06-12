@@ -69,7 +69,7 @@ class Personal
 				'archives'              => __( 'Personas', 'mgtc ' ),
 				'featured_image'        => __( 'Foto principal'),
 				'set_featured_image'    => __( 'Establecer la foto principal'),
-				'remove_featured_image' => __( 'Quitar la foto principal ' ),
+				'remove_featured_image' => __( 'Quitar la foto principal' ),
 				'use_featured_image'    => __( 'Usar esta foto como principal' )
 
 			),

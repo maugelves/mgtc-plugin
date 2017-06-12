@@ -1,0 +1,97 @@
+[
+    {
+        "key": "group_593ecb77b1711",
+        "title": "Teatros",
+        "fields": [
+            {
+                "key": "field_593ecd1114ac9",
+                "label": "Dirección",
+                "name": "mgtc_direccion_teatro",
+                "type": "text",
+                "instructions": "Indique la dirección del teatro",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_593ecd5914acb",
+                "label": "Ciudad",
+                "name": "mgtc_ciudad_teatro",
+                "type": "text",
+                "instructions": "Indique la ciudad del teatro",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_593ecd3b14aca",
+                "label": "Página web",
+                "name": "mgtc_website_teatro",
+                "type": "text",
+                "instructions": "Indique la página web del teatro",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "teatros"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]

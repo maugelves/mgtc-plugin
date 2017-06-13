@@ -7,6 +7,22 @@ if( function_exists('acf_add_local_field_group') ):
 		'title' => 'Obras',
 		'fields' => array (
 			array (
+				'key' => 'field_593f612fb1b48',
+				'label' => '',
+				'name' => '',
+				'type' => 'row',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'row_type' => 'row_open',
+				'col_num' => 2,
+			),
+			array (
 				'key' => 'field_593f5f12f95bc',
 				'label' => 'Estado',
 				'name' => 'mgtc_estado_obra',
@@ -49,6 +65,22 @@ if( function_exists('acf_add_local_field_group') ):
 				'display_format' => 'd/m/Y',
 				'return_format' => 'd/m/Y',
 				'first_day' => 1,
+			),
+			array (
+				'key' => 'field_593f621c86dad',
+				'label' => '',
+				'name' => '',
+				'type' => 'row',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'row_type' => 'row_close',
+				'col_num' => 2,
 			),
 			array (
 				'key' => 'field_593d4791b36a0',

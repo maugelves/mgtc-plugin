@@ -39,6 +39,21 @@ class General {
 			'settings'   => 'mgtc_header_bckg_color_sett',
 		) ) );
 
+
+		$wp_customize->add_setting(
+			'mgtc_header_text_color_sett',
+			array(
+				'default'     => '#FFFFFF',
+				'transport'   => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control( new \WP_Customize_Color_Control( $wp_customize, 'mgtc_header_text_color_control', array(
+			'label'      => __( 'Color del texto del header', 'mgtc' ),
+			'section'    => 'colors',
+			'settings'   => 'mgtc_header_text_color_sett',
+		) ) );
+
 	}
 
 }

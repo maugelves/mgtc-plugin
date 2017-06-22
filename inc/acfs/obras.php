@@ -153,9 +153,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => '<b>Reparto</b>: <nombres>
-<b>Dirección</b>: <nombres> 
-<b>Texto Original</b>: <nombres>
+				'default_value' => '<b>Texto Original</b>: <nombres>
 <b>Equipo Artístico</b>: <nombres>
 <b>Iluminación</b>: <nombres>
 <b>Escenografía</b>: <nombres>

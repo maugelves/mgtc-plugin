@@ -96,7 +96,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "category:actor"
+                    "roles:actor"
                 ],
                 "filters": [
                     "search"
@@ -125,7 +125,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "category:director"
+                    "roles:director"
                 ],
                 "filters": [
                     "search"
@@ -150,7 +150,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<b>Reparto<\/b>: <nombres>\r\n<b>Dirección<\/b>: <nombres> \r\n<b>Texto Original<\/b>: <nombres>\r\n<b>Equipo Artístico<\/b>: <nombres>\r\n<b>Iluminación<\/b>: <nombres>\r\n<b>Escenografía<\/b>: <nombres>\r\n<b>Vestuario\/figurinista<\/b>: <nombres>\r\n<b>Música Original<\/b>: <nombres>\r\n<b>Ayudante de Dirección<\/b>: <nombres>\r\n<b>Equipo Técnico<\/b>: <nombres>\r\n<b>Coordinador Técnico<\/b>: <nombres>\r\n<b>Técnico de Sonido<\/b>: <nombres>\r\n<b>Regiduría<\/b>: <nombres>\r\n<b>Equipo de Producción<\/b>: <nombres>\r\n<b>Diseño de Producción<\/b>: <nombres>\r\n<b>Productor Ejecutivo<\/b>: <nombres>\r\n<b>Jefa de Producción<\/b>: <nombres>\r\n<b>Secretaría de Producción<\/b>: <nombres>\r\n<b>Meritoria de Producción<\/b>: <nombres>\r\n<b>Realizaciones<\/b>: <nombres>\r\n<b>Construcción de la escenografía<\/b>: <nombres>\r\n<b>Vestuario Pepón Nieto<\/b>: <nombres>\r\n<b>Promoción<\/b>: <nombres>\r\n<b>Fotografías<\/b>: <nombres>\r\n<b>Distribución<\/b>: <nombres>",
+                "default_value": "<b>Texto Original<\/b>: <nombres>\r\n<b>Equipo Artístico<\/b>: <nombres>\r\n<b>Iluminación<\/b>: <nombres>\r\n<b>Escenografía<\/b>: <nombres>\r\n<b>Vestuario\/figurinista<\/b>: <nombres>\r\n<b>Música Original<\/b>: <nombres>\r\n<b>Ayudante de Dirección<\/b>: <nombres>\r\n<b>Equipo Técnico<\/b>: <nombres>\r\n<b>Coordinador Técnico<\/b>: <nombres>\r\n<b>Técnico de Sonido<\/b>: <nombres>\r\n<b>Regiduría<\/b>: <nombres>\r\n<b>Equipo de Producción<\/b>: <nombres>\r\n<b>Diseño de Producción<\/b>: <nombres>\r\n<b>Productor Ejecutivo<\/b>: <nombres>\r\n<b>Jefa de Producción<\/b>: <nombres>\r\n<b>Secretaría de Producción<\/b>: <nombres>\r\n<b>Meritoria de Producción<\/b>: <nombres>\r\n<b>Realizaciones<\/b>: <nombres>\r\n<b>Construcción de la escenografía<\/b>: <nombres>\r\n<b>Vestuario Pepón Nieto<\/b>: <nombres>\r\n<b>Promoción<\/b>: <nombres>\r\n<b>Fotografías<\/b>: <nombres>\r\n<b>Distribución<\/b>: <nombres>",
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 0,

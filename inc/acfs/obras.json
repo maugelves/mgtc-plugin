@@ -96,7 +96,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "roles:actor"
+                    "category:actor"
                 ],
                 "filters": [
                     "search"
@@ -125,7 +125,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "roles:director"
+                    "category:director"
                 ],
                 "filters": [
                     "search"
@@ -200,7 +200,7 @@
                 "key": "field_593d6299e7287",
                 "label": "Imágenes",
                 "name": "mgtc_imagenes_obra",
-                "type": "repeater",
+                "type": "gallery",
                 "instructions": "Seleccione las imágenes de la obra",
                 "required": 0,
                 "conditional_logic": 0,
@@ -209,37 +209,17 @@
                     "class": "",
                     "id": ""
                 },
-                "collapsed": "",
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "Agregar imagen",
-                "sub_fields": [
-                    {
-                        "key": "field_593d62b8e7288",
-                        "label": "Imagen",
-                        "name": "mgtc_imagen_obra",
-                        "type": "image",
-                        "instructions": "Seleccione la imagen",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "return_format": "array",
-                        "preview_size": "thumbnail",
-                        "library": "all",
-                        "min_width": "",
-                        "min_height": "",
-                        "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
-                        "max_size": "",
-                        "mime_types": ""
-                    }
-                ]
+                "min": "",
+                "max": "",
+                "insert": "append",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             },
             {
                 "key": "field_593d63bee7289",

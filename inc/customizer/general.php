@@ -12,7 +12,7 @@ class General {
 	}
 
 	public function remove_default_settings( $wp_customize ) {
-		
+
 		$wp_customize->remove_section( 'background_image' );
 		$wp_customize->remove_section( 'header_image' );
 		$wp_customize->remove_section( 'background_image' );

@@ -128,7 +128,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'category:director',
+					0 => 'roles:director',
 				),
 				'filters' => array (
 					0 => 'search',

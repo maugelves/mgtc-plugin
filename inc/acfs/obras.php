@@ -161,10 +161,10 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array (
 				'key' => 'field_593d6143e7284',
-				'label' => 'Ficha técnica',
-				'name' => 'mgtc_ficha_tecnica_obra',
+				'label' => 'Equipo técnico, artístico y productivo',
+				'name' => 'mgtc_obra_equipo_general',
 				'type' => 'wysiwyg',
-				'instructions' => 'Indique el resto del equipo que conforma la obra.',
+				'instructions' => 'Indique el equipo técnico, artístico y productivo que conforma la obra.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -179,24 +179,24 @@ if( function_exists('acf_add_local_field_group') ):
 <b>Vestuario/figurinista</b>: <nombres>
 <b>Música Original</b>: <nombres>
 <b>Ayudante de Dirección</b>: <nombres>
-<b>Equipo Técnico</b>: <nombres>
+<h4>Equipo Técnico</h4>
 <b>Coordinador Técnico</b>: <nombres>
-<b>Técnico de Sonido</b>: <nombres>
-<b>Regiduría</b>: <nombres>
-<b>Equipo de Producción</b>: <nombres>
+<b>Técnico de Sonido: <nombres>
+<b>Regiduría</b>: <nombres> 
+<h4>Equipo de Producción</h4>
 <b>Diseño de Producción</b>: <nombres>
 <b>Productor Ejecutivo</b>: <nombres>
 <b>Jefa de Producción</b>: <nombres>
 <b>Secretaría de Producción</b>: <nombres>
 <b>Meritoria de Producción</b>: <nombres>
-<b>Realizaciones</b>: <nombres>
+<h4>Realizaciones</h4>
 <b>Construcción de la escenografía</b>: <nombres>
 <b>Vestuario Pepón Nieto</b>: <nombres>
 <b>Promoción</b>: <nombres>
-<b>Fotografías</b>: <nombres>
+<b>Fotografías</b>:<nombres>
 <b>Distribución</b>: <nombres>',
 				'tabs' => 'all',
-				'toolbar' => 'full',
+				'toolbar' => 'basic',
 				'media_upload' => 0,
 				'delay' => 0,
 			),

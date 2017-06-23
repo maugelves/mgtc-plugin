@@ -158,10 +158,10 @@
             },
             {
                 "key": "field_593d6143e7284",
-                "label": "Ficha técnica",
-                "name": "mgtc_ficha_tecnica_obra",
+                "label": "Equipo técnico, artístico y productivo",
+                "name": "mgtc_obra_equipo_general",
                 "type": "wysiwyg",
-                "instructions": "Indique el resto del equipo que conforma la obra.",
+                "instructions": "Indique el equipo técnico, artístico y productivo que conforma la obra.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -169,9 +169,9 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<b>Texto Original<\/b>: <nombres>\r\n<b>Equipo Artístico<\/b>: <nombres>\r\n<b>Iluminación<\/b>: <nombres>\r\n<b>Escenografía<\/b>: <nombres>\r\n<b>Vestuario\/figurinista<\/b>: <nombres>\r\n<b>Música Original<\/b>: <nombres>\r\n<b>Ayudante de Dirección<\/b>: <nombres>\r\n<b>Equipo Técnico<\/b>: <nombres>\r\n<b>Coordinador Técnico<\/b>: <nombres>\r\n<b>Técnico de Sonido<\/b>: <nombres>\r\n<b>Regiduría<\/b>: <nombres>\r\n<b>Equipo de Producción<\/b>: <nombres>\r\n<b>Diseño de Producción<\/b>: <nombres>\r\n<b>Productor Ejecutivo<\/b>: <nombres>\r\n<b>Jefa de Producción<\/b>: <nombres>\r\n<b>Secretaría de Producción<\/b>: <nombres>\r\n<b>Meritoria de Producción<\/b>: <nombres>\r\n<b>Realizaciones<\/b>: <nombres>\r\n<b>Construcción de la escenografía<\/b>: <nombres>\r\n<b>Vestuario Pepón Nieto<\/b>: <nombres>\r\n<b>Promoción<\/b>: <nombres>\r\n<b>Fotografías<\/b>: <nombres>\r\n<b>Distribución<\/b>: <nombres>",
+                "default_value": "<b>Texto Original<\/b>: <nombres>\r\n<b>Equipo Artístico<\/b>: <nombres>\r\n<b>Iluminación<\/b>: <nombres>\r\n<b>Escenografía<\/b>: <nombres>\r\n<b>Vestuario\/figurinista<\/b>: <nombres>\r\n<b>Música Original<\/b>: <nombres>\r\n<b>Ayudante de Dirección<\/b>: <nombres>\r\n<h4>Equipo Técnico</h4>\r\n<b>Coordinador Técnico<\/b>: <nombres>\r\n<b>Técnico de Sonido: <nombres>\r\n<b>Regiduría<\/b>: <nombres> \r\n<h4>Equipo de Producción<\/h4>\r\n<b>Diseño de Producción<\/b>: <nombres>\r\n<b>Productor Ejecutivo<\/b>: <nombres>\r\n<b>Jefa de Producción<\/b>: <nombres>\r\n<b>Secretaría de Producción<\/b>: <nombres>\r\n<b>Meritoria de Producción<\/b>: <nombres>\r\n<h4>Realizaciones<\/h4>\r\n<b>Construcción de la escenografía<\/b>: <nombres>\r\n<b>Vestuario Pepón Nieto<\/b>: <nombres>\r\n<b>Promoción<\/b>: <nombres>\r\n<b>Fotografías<\/b>:<nombres>\r\n<b>Distribución<\/b>: <nombres>",
                 "tabs": "all",
-                "toolbar": "full",
+                "toolbar": "basic",
                 "media_upload": 0,
                 "delay": 0
             },

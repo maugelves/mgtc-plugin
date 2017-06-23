@@ -42,6 +42,22 @@
                 "maxlength": ""
             },
             {
+                "key": "field_594d393f5e1cc",
+                "label": "Enlace a Google Map",
+                "name": "mgtc_teatro_gmap",
+                "type": "url",
+                "instructions": "Indica un enlace a Google Maps",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
                 "key": "field_593ecd3b14aca",
                 "label": "Página web",
                 "name": "mgtc_website_teatro",

@@ -65,4 +65,5 @@ foreach (glob(__DIR__ . "/inc/customizer/*.php") as $filename)
 *   ACTIVATE PLUGIN FUNCTIONS
 *   =================================================================================================
 */
-register_activation_hook( __FILE__, array( 'MGTC_Base', 'activePlugin' ) );
+register_activation_hook( __FILE__, array( 'MGTC_Base', 'create_roles_terms' ) );
+register_activation_hook( __FILE__, array( 'MGTC_Base', 'create_giras_page' ) );

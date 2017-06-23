@@ -34,7 +34,10 @@ class MGTC_Base
 	public function registerCSSadminScripts( $hook ) {
 	}
 
-	public static function activePlugin(){
+	/**
+	 * Creates Rolex taxonomy terms
+	 */
+	public static function create_roles_terms(){
 
 		// Create Roles taxonomy if not exists
 		Personal::create_roles_taxonomy();
@@ -51,6 +54,32 @@ class MGTC_Base
 		if( !term_exists('Distribución', 'roles' ) )
 			wp_insert_term('Distribución', 'roles');
 
+	}
+
+
+	/**
+	 * Creates the Giras page
+	 */
+	public static function create_giras_page() {
+		// ========================================================
+		// Create a "Quienes Somos" WordPress page
+		$giras = get_page_by_path('giras' );
+
+		// Create the page if it doesn't exist
+		if( is_null ( $giras ) ):
+
+			$postarr = array(
+
+				'post_name'     => 'giras',
+				'post_title'    => "Giras",
+				'post_status'   => 'publish',
+				'post_type'     => 'page'
+
+			);
+
+			wp_insert_post( $postarr );
+
+		endif;
 	}
 
 

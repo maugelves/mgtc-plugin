@@ -118,7 +118,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'category:actor',
+					0 => 'roles:actor',
 				),
 				'filters' => array (
 					0 => 'search',
@@ -147,7 +147,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'category:director',
+					0 => 'roles:director',
 				),
 				'filters' => array (
 					0 => 'search',
@@ -319,7 +319,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'category:distribucion',
+					0 => 'roles:distribucion',
 				),
 				'filters' => array (
 					0 => 'search',
@@ -327,6 +327,33 @@ if( function_exists('acf_add_local_field_group') ):
 				'elements' => array (
 					0 => 'featured_image',
 				),
+				'min' => '',
+				'max' => '',
+				'return_format' => 'object',
+			),
+			array (
+				'key' => 'field_594d3690421f8',
+				'label' => 'Prensa',
+				'name' => 'mgtc_obra_prensa',
+				'type' => 'relationship',
+				'instructions' => 'Indique la persona encargada de prensa',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array (
+					0 => 'personal',
+				),
+				'taxonomy' => array (
+					0 => 'roles:prensa',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'elements' => '',
 				'min' => '',
 				'max' => '',
 				'return_format' => 'object',

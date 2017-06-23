@@ -115,7 +115,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "category:actor"
+                    "roles:actor"
                 ],
                 "filters": [
                     "search"
@@ -144,7 +144,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "category:director"
+                    "roles:director"
                 ],
                 "filters": [
                     "search"
@@ -169,7 +169,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<b>Texto Original<\/b>: <nombres>\r\n<b>Equipo Artístico<\/b>: <nombres>\r\n<b>Iluminación<\/b>: <nombres>\r\n<b>Escenografía<\/b>: <nombres>\r\n<b>Vestuario\/figurinista<\/b>: <nombres>\r\n<b>Música Original<\/b>: <nombres>\r\n<b>Ayudante de Dirección<\/b>: <nombres>\r\n<h4>Equipo Técnico</h4>\r\n<b>Coordinador Técnico<\/b>: <nombres>\r\n<b>Técnico de Sonido: <nombres>\r\n<b>Regiduría<\/b>: <nombres> \r\n<h4>Equipo de Producción<\/h4>\r\n<b>Diseño de Producción<\/b>: <nombres>\r\n<b>Productor Ejecutivo<\/b>: <nombres>\r\n<b>Jefa de Producción<\/b>: <nombres>\r\n<b>Secretaría de Producción<\/b>: <nombres>\r\n<b>Meritoria de Producción<\/b>: <nombres>\r\n<h4>Realizaciones<\/h4>\r\n<b>Construcción de la escenografía<\/b>: <nombres>\r\n<b>Vestuario Pepón Nieto<\/b>: <nombres>\r\n<b>Promoción<\/b>: <nombres>\r\n<b>Fotografías<\/b>:<nombres>\r\n<b>Distribución<\/b>: <nombres>",
+                "default_value": "<b>Texto Original<\/b>: <nombres>\r\n<b>Equipo Artístico<\/b>: <nombres>\r\n<b>Iluminación<\/b>: <nombres>\r\n<b>Escenografía<\/b>: <nombres>\r\n<b>Vestuario\/figurinista<\/b>: <nombres>\r\n<b>Música Original<\/b>: <nombres>\r\n<b>Ayudante de Dirección<\/b>: <nombres>\r\n<h4>Equipo Técnico<\/h4>\r\n<b>Coordinador Técnico<\/b>: <nombres>\r\n<b>Técnico de Sonido: <nombres>\r\n<b>Regiduría<\/b>: <nombres> \r\n<h4>Equipo de Producción<\/h4>\r\n<b>Diseño de Producción<\/b>: <nombres>\r\n<b>Productor Ejecutivo<\/b>: <nombres>\r\n<b>Jefa de Producción<\/b>: <nombres>\r\n<b>Secretaría de Producción<\/b>: <nombres>\r\n<b>Meritoria de Producción<\/b>: <nombres>\r\n<h4>Realizaciones<\/h4>\r\n<b>Construcción de la escenografía<\/b>: <nombres>\r\n<b>Vestuario Pepón Nieto<\/b>: <nombres>\r\n<b>Promoción<\/b>: <nombres>\r\n<b>Fotografías<\/b>:<nombres>\r\n<b>Distribución<\/b>: <nombres>",
                 "tabs": "all",
                 "toolbar": "basic",
                 "media_upload": 0,
@@ -294,7 +294,7 @@
                     "personal"
                 ],
                 "taxonomy": [
-                    "category:distribucion"
+                    "roles:distribucion"
                 ],
                 "filters": [
                     "search"
@@ -302,6 +302,33 @@
                 "elements": [
                     "featured_image"
                 ],
+                "min": "",
+                "max": "",
+                "return_format": "object"
+            },
+            {
+                "key": "field_594d3690421f8",
+                "label": "Prensa",
+                "name": "mgtc_obra_prensa",
+                "type": "relationship",
+                "instructions": "Indique la persona encargada de prensa",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "personal"
+                ],
+                "taxonomy": [
+                    "roles:prensa"
+                ],
+                "filters": [
+                    "search"
+                ],
+                "elements": "",
                 "min": "",
                 "max": "",
                 "return_format": "object"

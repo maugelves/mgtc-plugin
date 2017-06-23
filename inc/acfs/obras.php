@@ -7,6 +7,25 @@ if( function_exists('acf_add_local_field_group') ):
 		'title' => 'Obras',
 		'fields' => array (
 			array (
+				'key' => 'field_594d15d6dcca5',
+				'label' => 'Descripción breve',
+				'name' => 'mgtc_obra_excerpt',
+				'type' => 'textarea',
+				'instructions' => 'Desarrolle una descripción breve para utilizar en las fichas del espectáculo',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => 3,
+				'new_lines' => 'br',
+			),
+			array (
 				'key' => 'field_593f612fb1b48',
 				'label' => '',
 				'name' => '',
@@ -99,7 +118,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'roles:actor',
+					0 => 'category:actor',
 				),
 				'filters' => array (
 					0 => 'search',
@@ -128,7 +147,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'roles:director',
+					0 => 'category:director',
 				),
 				'filters' => array (
 					0 => 'search',
@@ -300,7 +319,7 @@ if( function_exists('acf_add_local_field_group') ):
 					0 => 'personal',
 				),
 				'taxonomy' => array (
-					0 => 'roles:distribucion',
+					0 => 'category:distribucion',
 				),
 				'filters' => array (
 					0 => 'search',

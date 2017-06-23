@@ -4,6 +4,25 @@
         "title": "Obras",
         "fields": [
             {
+                "key": "field_594d15d6dcca5",
+                "label": "Descripción breve",
+                "name": "mgtc_obra_excerpt",
+                "type": "textarea",
+                "instructions": "Desarrolle una descripción breve para utilizar en las fichas del espectáculo",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": "br"
+            },
+            {
                 "key": "field_593f612fb1b48",
                 "label": "",
                 "name": "",

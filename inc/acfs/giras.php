@@ -6,6 +6,32 @@ if( function_exists('acf_add_local_field_group') ):
 		'title' => 'Gira',
 		'fields' => array (
 			array (
+				'key' => 'field_594d1c2c933b3',
+				'label' => 'Obra de teatro',
+				'name' => 'mgtc_gira_obra',
+				'type' => 'relationship',
+				'instructions' => 'Selecciona la obra de teatro para la nueva fecha',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array (
+					0 => 'obras',
+				),
+				'taxonomy' => array (
+				),
+				'filters' => '',
+				'elements' => array (
+					0 => 'featured_image',
+				),
+				'min' => 1,
+				'max' => 1,
+				'return_format' => 'object',
+			),
+			array (
 				'key' => 'field_593f497e8855f',
 				'label' => 'Fecha',
 				'name' => 'mgtc_fecha_gira',

@@ -54,6 +54,9 @@ class MGTC_Base
 		if( !term_exists('Distribución', 'roles' ) )
 			wp_insert_term('Distribución', 'roles');
 
+		if( !term_exists('Prensa', 'roles' ) )
+			wp_insert_term('Prensa', 'roles');
+
 	}
 
 

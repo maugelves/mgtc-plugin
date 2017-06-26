@@ -45,9 +45,6 @@ class MGTC_Base
 		if( !term_exists('Director', 'roles' ) )
 			wp_insert_term('Director', 'roles');
 
-		if( !term_exists('Actor', 'roles' ) )
-			wp_insert_term('Actor', 'roles');
-
 		if( !term_exists('Producción', 'roles' ) )
 			wp_insert_term('Producción', 'roles');
 

@@ -103,10 +103,38 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array (
 				'key' => 'field_593d4791b36a0',
-				'label' => 'Actor(es)',
-				'name' => 'mgtc_obra_actores',
+				'label' => 'Actores principales',
+				'name' => 'mgtc_obra_actores_principales',
 				'type' => 'relationship',
-				'instructions' => 'Indique los actores de la obra',
+				'instructions' => 'Indique los actores principales de la obra',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array (
+					0 => 'actor',
+				),
+				'taxonomy' => array (
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'elements' => array (
+					0 => 'featured_image',
+				),
+				'min' => '',
+				'max' => '',
+				'return_format' => 'object',
+			),
+			array (
+				'key' => 'field_59516453b9788',
+				'label' => 'Actores secundarios',
+				'name' => 'mgtc_obra_actores_secundarios',
+				'type' => 'relationship',
+				'instructions' => 'Indique los actores secundarios de la obra',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -116,9 +144,10 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'post_type' => array (
 					0 => 'personal',
+					1 => 'actor',
+					2 => 'actor',
 				),
 				'taxonomy' => array (
-					0 => 'roles:actor',
 				),
 				'filters' => array (
 					0 => 'search',
@@ -144,7 +173,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'post_type' => array (
-					0 => 'personal',
+					0 => 'equipo',
 				),
 				'taxonomy' => array (
 					0 => 'roles:director',
@@ -316,7 +345,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'post_type' => array (
-					0 => 'personal',
+					0 => 'equipo',
 				),
 				'taxonomy' => array (
 					0 => 'roles:distribucion',
@@ -345,7 +374,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'post_type' => array (
-					0 => 'personal',
+					0 => 'equipo',
 				),
 				'taxonomy' => array (
 					0 => 'roles:prensa',
@@ -353,7 +382,9 @@ if( function_exists('acf_add_local_field_group') ):
 				'filters' => array (
 					0 => 'search',
 				),
-				'elements' => '',
+				'elements' => array (
+					0 => 'featured_image',
+				),
 				'min' => '',
 				'max' => '',
 				'return_format' => 'object',

@@ -2,24 +2,24 @@
 
 
 /**
- * Class Personal
+ * Class Equipo
  *
  * @author  Mauricio Gelves <mg@maugelves.com>
  * @since   1.0.1
  */
-class Personal
+class Equipo
 {
 	/**
 	 * Personal constructor.
 	 */
 	public function __construct() {
 
-		add_action( 'init', array( $this, 'create_cpt_personal' ), 10 );
+		add_action( 'init', array( $this, 'create_cpt_equipo' ), 10 );
 
 		if( !taxonomy_exists( 'roles' ) )
 			add_action( 'init', array( $this, 'create_roles_taxonomy' ), 11 );
 
-		register_activation_hook( MGTC_PATH, array( 'Personal', 'create_roles_taxonomy_and_add_terms' ) );
+		register_activation_hook( MGTC_PATH, array( 'Equipo', 'create_roles_taxonomy_and_add_terms' ) );
 
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 
@@ -34,7 +34,7 @@ class Personal
 	public function change_title_placeholder( $title ) {
 		$screen = get_current_screen();
 
-		if  ( 'personal' == $screen->post_type )
+		if  ( 'equipo' == $screen->post_type )
 			$title = __('Introduce el nombre completo', 'mgtc' );
 
 
@@ -44,18 +44,18 @@ class Personal
 
 
 	/**
-	 * This function creates the CPT Personal for Actors, Directors
+	 * This function creates the CPT Equipo for Directors
 	 * and other employees
 	 */
-	public function create_cpt_personal() {
+	public function create_cpt_equipo() {
 
 		$args = array(
-			'label'                 => __( 'Personal', 'mgtc' ),
+			'label'                 => __( 'Equipo', 'mgtc' ),
 			'labels'                => array (
 
 				// Labels values
-				'name'                  => __( 'Personal', 'mgtc' ),
-				'singular'              => __( 'Personal', 'mgtc' ),
+				'name'                  => __( 'Equipo', 'mgtc' ),
+				'singular'              => __( 'Equipo', 'mgtc' ),
 				'add_new'               => __( 'Agregar una persona', 'mgtc' ),
 				'add_new_item'          => __( 'Agregar una persona', 'mgtc' ),
 				'edit_item'             => __( 'Editar persona', 'mgtc' ),
@@ -76,14 +76,14 @@ class Personal
 			'public'                => true,
 			'exclude_from_search'   => true,
 			'show_ui'               => true,
-			'menu_position'         => 12,
+			'menu_position'         => 13,
 			'menu_icon'             => 'dashicons-universal-access',
 			'supports'              => array( 'title', 'thumbnail' ),
 			'has_archive'           => true
 		);
 
 
-		register_post_type( 'personal', $args );
+		register_post_type( 'equipo', $args );
 
 	}
 
@@ -118,9 +118,9 @@ class Personal
 			'hierarchical'  => true
 		);
 
-		register_taxonomy( 'roles', array( 'personal' ), $args );
+		register_taxonomy( 'roles', array( 'equipo' ), $args );
 
 	}
 
 }
-$personal = new Personal();
+$equipo = new Equipo();

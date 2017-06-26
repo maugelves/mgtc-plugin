@@ -1,13 +1,13 @@
-<?php
 
+<?php
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array (
-		'key' => 'group_5939e2e346c20',
-		'title' => 'Personal',
+		'key' => 'group_59515b2a0eb35',
+		'title' => 'Actores',
 		'fields' => array (
 			array (
-				'key' => 'field_5939e31c23729',
+				'key' => 'field_59515b2a12c49',
 				'label' => 'Biografía',
 				'name' => 'mgtc_biografia_persona',
 				'type' => 'wysiwyg',
@@ -26,11 +26,11 @@ if( function_exists('acf_add_local_field_group') ):
 				'delay' => 0,
 			),
 			array (
-				'key' => 'field_5939e4d22372f',
-				'label' => 'Email',
-				'name' => 'mgtc_email_persona',
-				'type' => 'email',
-				'instructions' => 'Indique el email de la persona',
+				'key' => 'field_59515b39cb1dd',
+				'label' => 'Datos de contacto',
+				'name' => 'mgtc_actor_contacto',
+				'type' => 'clone',
+				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -38,70 +38,16 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-			),
-			array (
-				'key' => 'field_5939e48b2372e',
-				'label' => 'Teléfono',
-				'name' => 'mgtc_telefono_persona',
-				'type' => 'text',
-				'instructions' => 'Indique el nro. de teléfono de la persona',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
+				'clone' => array (
+					0 => 'group_59515a0ec664a',
 				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
+				'display' => 'seamless',
+				'layout' => 'block',
+				'prefix_label' => 0,
+				'prefix_name' => 0,
 			),
 			array (
-				'key' => 'field_5939e38d2372a',
-				'label' => 'Cuenta de Twitter',
-				'name' => 'mgtc_cuenta_twitter_persona',
-				'type' => 'text',
-				'instructions' => 'Indique la cuenta de Twitter de la persona',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '@nombre_de_cuenta',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => 100,
-			),
-			array (
-				'key' => 'field_5939e3b62372b',
-				'label' => 'Cuenta de Facebook',
-				'name' => 'mgtc_cuenta_facebook_persona',
-				'type' => 'text',
-				'instructions' => 'Indique la cuenta de Facebook de la persona',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => 'https://www.facebook.com/maugelves',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => 200,
-			),
-			array (
-				'key' => 'field_5939e3e62372c',
+				'key' => 'field_59515b2a12ca8',
 				'label' => 'Fotos de la persona',
 				'name' => 'mgtc_fotos_persona',
 				'type' => 'repeater',
@@ -120,7 +66,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'button_label' => 'Agregar foto',
 				'sub_fields' => array (
 					array (
-						'key' => 'field_5939e42d2372d',
+						'key' => 'field_59515b2a1b96f',
 						'label' => 'Foto',
 						'name' => 'mgtc_foto_persona',
 						'type' => 'image',
@@ -151,7 +97,7 @@ if( function_exists('acf_add_local_field_group') ):
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'personal',
+					'value' => 'actor',
 				),
 			),
 		),

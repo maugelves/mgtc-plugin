@@ -1,0 +1,122 @@
+[
+    {
+        "key": "group_59515b2a0eb35",
+        "title": "Actores",
+        "fields": [
+            {
+                "key": "field_59515b2a12c49",
+                "label": "Biografía",
+                "name": "mgtc_biografia_persona",
+                "type": "wysiwyg",
+                "instructions": "Complete la biografía de la persona",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_59515b39cb1dd",
+                "label": "Datos de contacto",
+                "name": "mgtc_actor_contacto",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "clone": [
+                    "group_59515a0ec664a"
+                ],
+                "display": "seamless",
+                "layout": "block",
+                "prefix_label": 0,
+                "prefix_name": 0
+            },
+            {
+                "key": "field_59515b2a12ca8",
+                "label": "Fotos de la persona",
+                "name": "mgtc_fotos_persona",
+                "type": "repeater",
+                "instructions": "Agregue fotos de la persona. Si carga más de una se generará un slider.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5939e42d2372d",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Agregar foto",
+                "sub_fields": [
+                    {
+                        "key": "field_59515b2a1b96f",
+                        "label": "Foto",
+                        "name": "mgtc_foto_persona",
+                        "type": "image",
+                        "instructions": "Seleccione una foto",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "jpg,png"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "actor"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "author",
+            "format",
+            "page_attributes",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]

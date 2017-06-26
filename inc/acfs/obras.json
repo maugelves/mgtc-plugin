@@ -100,10 +100,10 @@
             },
             {
                 "key": "field_593d4791b36a0",
-                "label": "Actor(es)",
-                "name": "mgtc_obra_actores",
+                "label": "Actores principales",
+                "name": "mgtc_obra_actores_principales",
                 "type": "relationship",
-                "instructions": "Indique los actores de la obra",
+                "instructions": "Indique los actores principales de la obra",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -112,11 +112,38 @@
                     "id": ""
                 },
                 "post_type": [
-                    "personal"
+                    "actor"
                 ],
-                "taxonomy": [
-                    "roles:actor"
+                "taxonomy": [],
+                "filters": [
+                    "search"
                 ],
+                "elements": [
+                    "featured_image"
+                ],
+                "min": "",
+                "max": "",
+                "return_format": "object"
+            },
+            {
+                "key": "field_59516453b9788",
+                "label": "Actores secundarios",
+                "name": "mgtc_obra_actores_secundarios",
+                "type": "relationship",
+                "instructions": "Indique los actores secundarios de la obra",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "personal",
+                    "actor",
+                    "actor"
+                ],
+                "taxonomy": [],
                 "filters": [
                     "search"
                 ],
@@ -141,7 +168,7 @@
                     "id": ""
                 },
                 "post_type": [
-                    "personal"
+                    "equipo"
                 ],
                 "taxonomy": [
                     "roles:director"
@@ -291,7 +318,7 @@
                     "id": ""
                 },
                 "post_type": [
-                    "personal"
+                    "equipo"
                 ],
                 "taxonomy": [
                     "roles:distribucion"
@@ -320,7 +347,7 @@
                     "id": ""
                 },
                 "post_type": [
-                    "personal"
+                    "equipo"
                 ],
                 "taxonomy": [
                     "roles:prensa"
@@ -328,7 +355,9 @@
                 "filters": [
                     "search"
                 ],
-                "elements": "",
+                "elements": [
+                    "featured_image"
+                ],
                 "min": "",
                 "max": "",
                 "return_format": "object"

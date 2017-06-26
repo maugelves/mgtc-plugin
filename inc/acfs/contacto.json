@@ -1,0 +1,152 @@
+[
+    {
+        "key": "group_59515a0ec664a",
+        "title": "Contacto",
+        "fields": [
+            {
+                "key": "field_59515a0eca4ee",
+                "label": "Email",
+                "name": "mgtc_contacto_email",
+                "type": "email",
+                "instructions": "Indique el email de la persona",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_59515a0eca50b",
+                "label": "Cuenta de Twitter",
+                "name": "mgtc_contacto_twitter",
+                "type": "text",
+                "instructions": "Indique la cuenta de Twitter de la persona",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "@nombre_de_cuenta",
+                "prepend": "",
+                "append": "",
+                "maxlength": 100
+            },
+            {
+                "key": "field_59515a0eca51b",
+                "label": "Cuenta de Facebook",
+                "name": "mgtc_contacto_facebook",
+                "type": "text",
+                "instructions": "Indique la cuenta de Facebook de la persona",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https:\/\/www.facebook.com\/maugelves",
+                "prepend": "",
+                "append": "",
+                "maxlength": 200
+            },
+            {
+                "key": "field_59515a2a8af88",
+                "label": "Cuenta de Instagram",
+                "name": "mgtc_contacto_instagram",
+                "type": "text",
+                "instructions": "Indique la cuenta de Facebook de la persona",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https:\/\/www.facebook.com\/maugelves",
+                "prepend": "",
+                "append": "",
+                "maxlength": 200
+            },
+            {
+                "key": "field_59515a6f8af89",
+                "label": "Teléfonos",
+                "name": "mgtc_contacto_telefonos",
+                "type": "repeater",
+                "instructions": "Introduzca el(los) teléfono(s) del contacto",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_59515a928af8a",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Agregar teléfono",
+                "sub_fields": [
+                    {
+                        "key": "field_59515a928af8a",
+                        "label": "Teléfono",
+                        "name": "mgtc_contacto_telefono",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "personal"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "author",
+            "format",
+            "page_attributes",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 0,
+        "description": ""
+    }
+]

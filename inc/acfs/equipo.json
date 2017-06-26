@@ -1,7 +1,7 @@
 [
     {
         "key": "group_5939e2e346c20",
-        "title": "Personal",
+        "title": "Equipo",
         "fields": [
             {
                 "key": "field_5939e31c23729",
@@ -148,7 +148,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "personal"
+                    "value": "equipo"
                 }
             ]
         ],

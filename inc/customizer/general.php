@@ -41,6 +41,21 @@ class General {
 
 
 		$wp_customize->add_setting(
+			'mgtc_header_bckg_color_mobile_sett',
+			array(
+				'default'     => '#000000',
+				'transport'   => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control( new \WP_Customize_Color_Control( $wp_customize, 'mgtc_header_bckg_color_mobile_sett', array(
+			'label'      => __( 'Color de fondo del header en móviles', 'mgtc' ),
+			'section'    => 'colors',
+			'settings'   => 'mgtc_header_bckg_color_mobile_sett',
+		) ) );
+
+
+		$wp_customize->add_setting(
 			'mgtc_header_text_color_sett',
 			array(
 				'default'     => '#FFFFFF',

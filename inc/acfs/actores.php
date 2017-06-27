@@ -9,7 +9,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array (
 				'key' => 'field_59515b2a12c49',
 				'label' => 'Biografía',
-				'name' => 'mgtc_biografia_persona',
+				'name' => 'mgtc_actor_biografia',
 				'type' => 'wysiwyg',
 				'instructions' => 'Complete la biografía de la persona',
 				'required' => 0,
@@ -48,10 +48,10 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array (
 				'key' => 'field_59515b2a12ca8',
-				'label' => 'Fotos de la persona',
-				'name' => 'mgtc_fotos_persona',
+				'label' => 'Galería de fotos del actor',
+				'name' => 'mgtc_actor_galeria',
 				'type' => 'repeater',
-				'instructions' => 'Agregue fotos de la persona. Si carga más de una se generará un slider.',
+				'instructions' => 'Agregue una galería de fotos de la persona.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
@@ -59,7 +59,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'collapsed' => 'field_5939e42d2372d',
+				'collapsed' => '',
 				'min' => 0,
 				'max' => 0,
 				'layout' => 'table',
@@ -68,7 +68,7 @@ if( function_exists('acf_add_local_field_group') ):
 					array (
 						'key' => 'field_59515b2a1b96f',
 						'label' => 'Foto',
-						'name' => 'mgtc_foto_persona',
+						'name' => 'mgtc_actor_galeria_foto',
 						'type' => 'image',
 						'instructions' => 'Seleccione una foto',
 						'required' => 1,

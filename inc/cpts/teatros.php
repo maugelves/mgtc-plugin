@@ -79,7 +79,7 @@ class Teatros
 		);
 
 
-		register_post_type( 'teatros', $args );
+		register_post_type( 'teatro', $args );
 
 	}
 
@@ -94,7 +94,7 @@ class Teatros
 	 */
 	public function updated_messages_cb( $messages ) {
 
-		$messages['teatros'] = array(
+		$messages['teatro'] = array(
 			0  => '', // Unused. Messages start at index 1.
 			1 => __( 'Teatro actualizado.', 'mgsp' ),
 			4 => __( 'Teatro actualizado.', 'mgsp' ),

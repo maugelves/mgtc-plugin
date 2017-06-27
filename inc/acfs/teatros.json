@@ -82,7 +82,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "teatros"
+                    "value": "teatro"
                 }
             ]
         ],

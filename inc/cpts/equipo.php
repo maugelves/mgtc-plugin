@@ -67,10 +67,10 @@ class Equipo
 				'not_found_in_trash'    => __( 'No hay registros eliminados', 'mgtc' ),
 				'all_items'             => __( 'Todas las personas', 'mgtc' ),
 				'archives'              => __( 'Personas', 'mgtc ' ),
-				'featured_image'        => __( 'Foto principal'),
-				'set_featured_image'    => __( 'Establecer la foto principal'),
-				'remove_featured_image' => __( 'Quitar la foto principal' ),
-				'use_featured_image'    => __( 'Usar esta foto como principal' )
+				'featured_image'        => __( 'Foto principal', 'mgtc' ),
+				'set_featured_image'    => __( 'Establecer la foto principal', 'mgtc' ),
+				'remove_featured_image' => __( 'Quitar la foto principal', 'mgtc' ),
+				'use_featured_image'    => __( 'Usar esta foto como principal', 'mgtc' )
 
 			),
 			'public'                => true,

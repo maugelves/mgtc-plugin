@@ -58,10 +58,10 @@ class Obras
 				'not_found_in_trash'    => __( 'No hay registros eliminados', 'mgtc' ),
 				'all_items'             => __( 'Todas las obras', 'mgtc' ),
 				'archives'              => __( 'Obras', 'mgtc ' ),
-				'featured_image'        => __( 'Poster de la obra'),
-				'set_featured_image'    => __( 'Establecer el poster'),
-				'remove_featured_image' => __( 'Quitar el poster' ),
-				'use_featured_image'    => __( 'Usar este poster como principal' )
+				'featured_image'        => __( 'Poster de la obra', 'mgtc' ),
+				'set_featured_image'    => __( 'Establecer el poster', 'mgtc' ),
+				'remove_featured_image' => __( 'Quitar el poster', 'mgtc' ),
+				'use_featured_image'    => __( 'Usar este poster como principal', 'mgtc' )
 
 			),
 			'public'                => true,

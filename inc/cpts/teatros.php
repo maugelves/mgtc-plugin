@@ -61,10 +61,10 @@ class Teatros
 				'not_found_in_trash'    => __( 'No hay teatros eliminados', 'mgtc' ),
 				'all_items'             => __( 'Todos los teatros', 'mgtc' ),
 				'archives'              => __( 'Teatros', 'mgtc ' ),
-				'featured_image'        => __( 'Foto del teatro'),
-				'set_featured_image'    => __( 'Establecer la foto'),
-				'remove_featured_image' => __( 'Quitar la foto' ),
-				'use_featured_image'    => __( 'Usar esta foto' )
+				'featured_image'        => __( 'Foto del teatro', 'mgtc' ),
+				'set_featured_image'    => __( 'Establecer la foto', 'mgtc' ),
+				'remove_featured_image' => __( 'Quitar la foto', 'mgtc' ),
+				'use_featured_image'    => __( 'Usar esta foto', 'mgtc' )
 
 			),
 			'public'                => true,

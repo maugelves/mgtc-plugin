@@ -395,7 +395,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "obras"
+                    "value": "obra"
                 }
             ]
         ],

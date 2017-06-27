@@ -75,7 +75,7 @@ class Obras
 		);
 
 
-		register_post_type( 'obras', $args );
+		register_post_type( 'obra', $args );
 
 	}
 
@@ -89,7 +89,7 @@ class Obras
 	 */
 	public function updated_messages_cb( $messages ) {
 
-		$messages['obras'] = array(
+		$messages['obra'] = array(
 			0  => '', // Unused. Messages start at index 1.
 			1 => __( 'Obra actualizada.', 'mgsp' ),
 			4 => __( 'Obra actualizada.', 'mgsp' ),

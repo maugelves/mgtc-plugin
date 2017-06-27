@@ -18,6 +18,8 @@ class Teatros
 
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 
+		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
+
 	}
 
 	/**
@@ -79,6 +81,32 @@ class Teatros
 
 		register_post_type( 'teatros', $args );
 
+	}
+
+
+
+
+	/**
+	 * Customized messages for Gira Custom Post Type
+	 *
+	 * @param   array $messages Default messages.
+	 * @return  array 			Returns an array with the new messages
+	 */
+	public function updated_messages_cb( $messages ) {
+
+		$messages['teatros'] = array(
+			0  => '', // Unused. Messages start at index 1.
+			1 => __( 'Teatro actualizado.', 'mgsp' ),
+			4 => __( 'Teatro actualizado.', 'mgsp' ),
+			/* translators: %s: date and time of the revision */
+			5 => isset( $_GET['revision']) ? sprintf( __( 'Teatro recuperado de la revisión %s.', 'mgsp' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6 => __( 'Teatro publicado.', 'mgsp' ),
+			7 => __( 'Teatro guardado.', 'mgsp' ),
+			9 => __('Teatro programado', 'mgsp' ),
+			10 => __( 'Borrador de teatro actualizado.', 'mgsp' ),
+		);
+
+		return $messages;
 	}
 
 }

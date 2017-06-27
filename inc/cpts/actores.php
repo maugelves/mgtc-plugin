@@ -18,6 +18,8 @@ class Actor
 
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 
+		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
+
 	}
 
 	/**
@@ -79,6 +81,32 @@ class Actor
 
 		register_post_type( 'actor', $args );
 
+	}
+
+
+
+
+	/**
+	 * Customized messages for Actor Custom Post Type
+	 *
+	 * @param   array $messages Default messages.
+	 * @return  array 			Returns an array with the new messages
+	 */
+	public function updated_messages_cb( $messages ) {
+
+		$messages['actor'] = array(
+			0  => '', // Unused. Messages start at index 1.
+			1 => __( 'Actor actualizado.', 'mgsp' ),
+			4 => __( 'Actor actualizado.', 'mgsp' ),
+			/* translators: %s: date and time of the revision */
+			5 => isset( $_GET['revision']) ? sprintf( __( 'Actor recuperado de la revisión %s.', 'mgsp' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6 => __( 'Actor publicado.', 'mgsp' ),
+			7 => __( 'Actor guardado.', 'mgsp' ),
+			9 => __('Actor programado', 'mgsp' ),
+			10 => __( 'Borrador de actor actualizado.', 'mgsp' ),
+		);
+
+		return $messages;
 	}
 
 }

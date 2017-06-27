@@ -16,6 +16,7 @@ class Giras
 	public function __construct() {
 
 		add_action( 'init', array( $this, 'create_cpt_giras' ), 10 );
+		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
 
 	}
 
@@ -58,6 +59,32 @@ class Giras
 
 		register_post_type( 'gira', $args );
 
+	}
+
+
+
+
+	/**
+	 * Customized messages for Gira Custom Post Type
+	 *
+	 * @param   array $messages Default messages.
+	 * @return  array 			Returns an array with the new messages
+	 */
+	public function updated_messages_cb( $messages ) {
+
+		$messages['gira'] = array(
+			0  => '', // Unused. Messages start at index 1.
+			1 => __( 'Gira actualizada.', 'mgsp' ),
+			4 => __( 'Gira actualizada.', 'mgsp' ),
+			/* translators: %s: date and time of the revision */
+			5 => isset( $_GET['revision']) ? sprintf( __( 'Gira recuperada de la revisión %s.', 'mgsp' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6 => __( 'Gira publicada.', 'mgsp' ),
+			7 => __( 'Gira guardada.', 'mgsp' ),
+			9 => __('Gira programada', 'mgsp' ),
+			10 => __( 'Borrador de gira actualizado.', 'mgsp' ),
+		);
+
+		return $messages;
 	}
 
 

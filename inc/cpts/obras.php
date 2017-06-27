@@ -15,6 +15,7 @@ class Obras
 	public function __construct() {
 		add_action( 'init', array( $this, 'create_cpt_obras' ), 10 );
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
+		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
 	}
 
 	/**
@@ -76,6 +77,31 @@ class Obras
 
 		register_post_type( 'obras', $args );
 
+	}
+
+
+
+	/**
+	 * Customized messages for Gira Custom Post Type
+	 *
+	 * @param   array $messages Default messages.
+	 * @return  array 			Returns an array with the new messages
+	 */
+	public function updated_messages_cb( $messages ) {
+
+		$messages['obras'] = array(
+			0  => '', // Unused. Messages start at index 1.
+			1 => __( 'Obra actualizada.', 'mgsp' ),
+			4 => __( 'Obra actualizada.', 'mgsp' ),
+			/* translators: %s: date and time of the revision */
+			5 => isset( $_GET['revision']) ? sprintf( __( 'Obra recuperada de la revisión %s.', 'mgsp' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6 => __( 'Obra publicada.', 'mgsp' ),
+			7 => __( 'Obra guardada.', 'mgsp' ),
+			9 => __('Obra programada', 'mgsp' ),
+			10 => __( 'Borrador de obra actualizado.', 'mgsp' ),
+		);
+
+		return $messages;
 	}
 
 }

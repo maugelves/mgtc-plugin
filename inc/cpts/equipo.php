@@ -23,6 +23,8 @@ class Equipo
 
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 
+		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
+
 	}
 
 	/**
@@ -120,6 +122,32 @@ class Equipo
 
 		register_taxonomy( 'roles', array( 'equipo' ), $args );
 
+	}
+
+
+
+
+	/**
+	 * Customized messages for Persona Custom Post Type
+	 *
+	 * @param   array $messages Default messages.
+	 * @return  array 			Returns an array with the new messages
+	 */
+	public function updated_messages_cb( $messages ) {
+
+		$messages['equipo'] = array(
+			0  => '', // Unused. Messages start at index 1.
+			1 => __( 'Persona actualizada.', 'mgsp' ),
+			4 => __( 'Persona actualizada.', 'mgsp' ),
+			/* translators: %s: date and time of the revision */
+			5 => isset( $_GET['revision']) ? sprintf( __( 'Persona recuperada de la revisión %s.', 'mgsp' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6 => __( 'Persona publicada.', 'mgsp' ),
+			7 => __( 'Persona guardada.', 'mgsp' ),
+			9 => __('Persona programado', 'mgsp' ),
+			10 => __( 'Borrador de persona actualizado.', 'mgsp' ),
+		);
+
+		return $messages;
 	}
 
 }

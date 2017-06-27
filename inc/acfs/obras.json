@@ -361,6 +361,33 @@
                 "min": "",
                 "max": "",
                 "return_format": "object"
+            },
+            {
+                "key": "field_5952783fbf74d",
+                "label": "Sponsors",
+                "name": "mgtc_obra_sponsors",
+                "type": "relationship",
+                "instructions": "Indique los patrocinadores de la obra",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "sponsor"
+                ],
+                "taxonomy": [],
+                "filters": [
+                    "search"
+                ],
+                "elements": [
+                    "featured_image"
+                ],
+                "min": "",
+                "max": "",
+                "return_format": "object"
             }
         ],
         "location": [

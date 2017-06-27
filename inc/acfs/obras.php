@@ -389,6 +389,34 @@ if( function_exists('acf_add_local_field_group') ):
 				'max' => '',
 				'return_format' => 'object',
 			),
+			array (
+				'key' => 'field_5952783fbf74d',
+				'label' => 'Sponsors',
+				'name' => 'mgtc_obra_sponsors',
+				'type' => 'relationship',
+				'instructions' => 'Indique los patrocinadores de la obra',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array (
+					0 => 'sponsor',
+				),
+				'taxonomy' => array (
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'elements' => array (
+					0 => 'featured_image',
+				),
+				'min' => '',
+				'max' => '',
+				'return_format' => 'object',
+			),
 		),
 		'location' => array (
 			array (

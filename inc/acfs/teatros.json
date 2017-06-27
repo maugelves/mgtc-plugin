@@ -75,6 +75,25 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
+            },
+            {
+                "key": "field_5952bd34894be",
+                "label": "Teléfono",
+                "name": "mgtc_teatro_telefono",
+                "type": "text",
+                "instructions": "Indique el número de teléfono del teatro",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [

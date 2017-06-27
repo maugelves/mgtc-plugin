@@ -1,4 +1,5 @@
 <?php
+
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array (
@@ -65,6 +66,25 @@ if( function_exists('acf_add_local_field_group') ):
 				'name' => 'mgtc_website_teatro',
 				'type' => 'text',
 				'instructions' => 'Indique la página web del teatro',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5952bd34894be',
+				'label' => 'Teléfono',
+				'name' => 'mgtc_teatro_telefono',
+				'type' => 'text',
+				'instructions' => 'Indique el número de teléfono del teatro',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (

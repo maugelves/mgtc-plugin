@@ -52,7 +52,7 @@ class Giras
 			'show_ui'               => true,
 			'menu_position'         => 12,
 			'menu_icon'             => 'dashicons-tickets-alt',
-			'supports'              => array(),
+			'supports'              => false,
 			'has_archive'           => true
 		);
 

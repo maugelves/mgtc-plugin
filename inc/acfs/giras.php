@@ -1,4 +1,5 @@
 <?php
+
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array (
@@ -77,40 +78,13 @@ if( function_exists('acf_add_local_field_group') ):
 				'return_format' => 'object',
 			),
 			array (
-				'key' => 'field_593f4aae8dc7b',
-				'label' => '¿Hay venta de entradas online?',
-				'name' => 'mgtc_hay_entradas_gira',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-			array (
 				'key' => 'field_593f4a638dc7a',
-				'label' => 'Entradas',
+				'label' => 'Enlace a la venta de entradas',
 				'name' => 'mgtc_entradas_gira',
 				'type' => 'url',
 				'instructions' => 'Indique el enlace a la venta de entradas para la obra',
 				'required' => 1,
-				'conditional_logic' => array (
-					array (
-						array (
-							'field' => 'field_593f4aae8dc7b',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-				),
+				'conditional_logic' => 0,
 				'wrapper' => array (
 					'width' => '',
 					'class' => '',
@@ -118,33 +92,6 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'default_value' => '',
 				'placeholder' => '',
-			),
-			array (
-				'key' => 'field_593f4b518dc7c',
-				'label' => 'Texto del enlace',
-				'name' => 'mgtc_texto_link_obra',
-				'type' => 'text',
-				'instructions' => 'Indique el texto que tendrá el enlace para la compra de entradas',
-				'required' => 0,
-				'conditional_logic' => array (
-					array (
-						array (
-							'field' => 'field_593f4aae8dc7b',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-				),
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => 'Comprar entradas online',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
 			),
 		),
 		'location' => array (

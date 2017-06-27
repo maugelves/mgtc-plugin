@@ -21,6 +21,18 @@ define( 'MGTC_URL', plugins_url() . '/' . MGTC_FOLDER );
 include (MGTC_PATH . "/inc/base.php");
 
 
+
+
+/*
+*   =================================================================================================
+*   PLUGIN DEPENDENCIES
+*   =================================================================================================
+*/
+include ( MGTC_PATH . "/inc/libs/class-tgm-plugin-activation.php" );
+add_action( 'tgmpa_register', array( 'MGTC_Base', 'check_plugin_dependencies' ) );
+
+
+
 /*
 *   =================================================================================================
 *   CUSTOM POST TYPES

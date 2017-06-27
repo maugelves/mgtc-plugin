@@ -40,7 +40,7 @@ class MGTC_Base
 	public static function create_roles_terms(){
 
 		// Create Roles taxonomy if not exists
-		Personal::create_roles_taxonomy();
+		Equipo::create_roles_taxonomy();
 
 		if( !term_exists('Director', 'roles' ) )
 			wp_insert_term('Director', 'roles');
@@ -55,6 +55,32 @@ class MGTC_Base
 			wp_insert_term('Prensa', 'roles');
 
 	}
+
+
+
+	/**
+	 * Check the plugin dependencies
+	 */
+	public static function check_plugin_dependencies() {
+		/**
+		 * Array of plugin arrays. Required keys are name and slug.
+		 * If the source is NOT from the .org repo, then source is also required.
+		 */
+		$plugins = array(
+
+			// This is an example of how to include a plugin from an arbitrary external source in your theme.
+			array(
+				'name'         => 'Advanced Custom Fields PRO', // The plugin name.
+				'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+				'required'     => true, // If false, the plugin is only 'recommended' instead of required.
+				'external_url' => 'https://www.advancedcustomfields.com/pro/', // If set, overrides default API URL and points to an external URL.
+			),
+		);
+
+		tgmpa( $plugins );
+
+	}
+
 
 
 	/**

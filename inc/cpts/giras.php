@@ -16,7 +16,9 @@ class Giras
 	public function __construct() {
 
 		add_action( 'init', array( $this, 'create_cpt_giras' ), 10 );
-		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
+		add_filter( 'post_updated_messages', array( $this, 'updated_messages_cb' ) );
+		add_action( 'manage_posts_custom_column' , array( $this, 'manage_giras_custom_column' ), 10, 2 );
+		add_filter( 'manage_gira_posts_columns' , array( $this, 'gira_cpt_columns' ) );
 
 	}
 
@@ -61,6 +63,83 @@ class Giras
 
 	}
 
+
+	/**
+	 * Returns next dates from the Gira of all the plays
+	 *
+	 * @param   $dates_count    int     Number of dates to return
+	 * @return  \WP_Query       Returns an array of Gira or false if no dates are found
+	 * @since   1.0.1
+	 */
+	public static function get_next_dates( $dates_count = 10 ){
+
+		$args = array(
+			'meta_type'         => 'DATETIME',
+			'order'             => 'ASC',
+			'orderby'           => 'meta_value_num',
+			'posts_per_page'    => $dates_count,
+			'post_status'       => 'publish',
+			'post_type'         => 'gira'
+		);
+
+		$obras = new \WP_Query( $args );
+
+		return $obras;
+	}
+
+
+
+	function gira_cpt_columns($columns) {
+
+		// Remove the title and date
+		unset ( $columns['title'] );
+		unset ( $columns['date'] );
+
+		// Add new columns
+		$new_columns = array(
+			'gira_date' => __('Fecha de la gira', 'mgtc'),
+			'obra'      => __('Obra', 'mgtc'),
+			'city'      => __('Ciudad', 'mgtc'),
+			'theatre'   => __('Teatro', 'mgtc'),
+		);
+
+		return array_merge($columns, $new_columns);
+
+	}
+
+
+
+
+	function manage_giras_custom_column( $column, $post_id ) {
+
+		switch ( $column ) {
+			case 'gira_date':
+				$fecha = get_post_meta( $post_id, 'mgtc_fecha_gira', true);
+				?>
+				<a href="<?php get_edit_post_link($post_id) ?>"><?php echo mysql2date('d/m/Y - H:i', $fecha); ?></a>
+				<?php
+				break;
+
+			case 'obra':
+				$obra = get_post_meta ($post_id, 'mgtc_gira_obra', true); ?>
+				<a href="<?php echo get_edit_post_link( $obra[0] ); ?>"><?php echo get_the_title( $obra[0] ) ?></a>
+				<?php
+				break;
+
+			case 'city':
+				$teatro = get_post_meta( $post_id, 'mgtc_teatro_gira', true );
+				$teatro_city = get_post_meta( $teatro[0], 'mgtc_ciudad_teatro', true );
+				echo $teatro_city;
+				break;
+
+			case 'theatre':
+				$teatro = get_post_meta( $post_id, 'mgtc_teatro_gira', true ); ?>
+				<a href="<?php echo get_edit_post_link( $teatro[0] ); ?>"><?php echo get_the_title( $teatro[0] ) ?></a>
+				<?php
+				break;
+		}
+
+	}
 
 
 

@@ -20,7 +20,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'post_type' => array (
-					0 => 'obras',
+					0 => 'obra',
 				),
 				'taxonomy' => array (
 				),
@@ -63,7 +63,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'id' => '',
 				),
 				'post_type' => array (
-					0 => 'teatros',
+					0 => 'teatro',
 				),
 				'taxonomy' => array (
 				),
@@ -73,8 +73,8 @@ if( function_exists('acf_add_local_field_group') ):
 				'elements' => array (
 					0 => 'featured_image',
 				),
-				'min' => '',
-				'max' => '',
+				'min' => 1,
+				'max' => 1,
 				'return_format' => 'object',
 			),
 			array (
@@ -83,7 +83,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'name' => 'mgtc_entradas_gira',
 				'type' => 'url',
 				'instructions' => 'Indique el enlace a la venta de entradas para la obra',
-				'required' => 1,
+				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array (
 					'width' => '',

@@ -69,6 +69,52 @@ class General {
 			'settings'   => 'mgtc_header_text_hover_color_sett',
 		) ) );
 
+		$wp_customize->add_setting(
+			'mgtc_footer_bckg_color_sett',
+			array(
+				'default'     => '#FFFFFF',
+				'transport'   => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control( new \WP_Customize_Color_Control( $wp_customize, 'mgtc_footer_bckg_color_control', array(
+			'label'      => __( 'Color de fondo del footer', 'mgtc' ),
+			'section'    => 'colors',
+			'settings'   => 'mgtc_footer_bckg_color_sett',
+		) ) );
+
+
+		$wp_customize->add_setting(
+			'mgtc_footer_text_color_sett',
+			array(
+				'default'     => '#FFFFFF',
+				'transport'   => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control( new \WP_Customize_Color_Control( $wp_customize, 'mgtc_footer_text_color_control', array(
+			'label'      => __( 'Color del texto del footer', 'mgtc' ),
+			'section'    => 'colors',
+			'settings'   => 'mgtc_footer_text_color_sett',
+		) ) );
+
+
+
+
+		$wp_customize->add_setting(
+			'mgtc_footer_text_hover_color_sett',
+			array(
+				'default'     => '#FFFFFF',
+				'transport'   => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control( new \WP_Customize_Color_Control( $wp_customize, 'mgtc_footer_text_hover_color_control', array(
+			'label'      => __( 'Color del hover del texto del footer', 'mgtc' ),
+			'section'    => 'colors',
+			'settings'   => 'mgtc_footer_text_hover_color_sett',
+		) ) );
+
 	}
 
 }

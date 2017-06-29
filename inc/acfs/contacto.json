@@ -26,7 +26,7 @@
                 "label": "Cuenta de Twitter",
                 "name": "mgtc_contacto_twitter",
                 "type": "text",
-                "instructions": "Indique la cuenta de Twitter de la persona",
+                "instructions": "Indique la cuenta de Twitter de la persona (sin el @)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -35,7 +35,7 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "@nombre_de_cuenta",
+                "placeholder": "maugelves",
                 "prepend": "",
                 "append": "",
                 "maxlength": 100
@@ -54,7 +54,7 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "https:\/\/www.facebook.com\/maugelves",
+                "placeholder": "maugelves",
                 "prepend": "",
                 "append": "",
                 "maxlength": 200
@@ -64,7 +64,7 @@
                 "label": "Cuenta de Instagram",
                 "name": "mgtc_contacto_instagram",
                 "type": "text",
-                "instructions": "Indique la cuenta de Facebook de la persona",
+                "instructions": "Indique la cuenta de Instagram de la persona",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -73,7 +73,7 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "https:\/\/www.facebook.com\/maugelves",
+                "placeholder": "maugelves",
                 "prepend": "",
                 "append": "",
                 "maxlength": 200
@@ -124,7 +124,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "personal"
+                    "value": "post"
                 }
             ]
         ],

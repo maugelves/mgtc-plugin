@@ -70,7 +70,7 @@ class Obras
 			'show_ui'               => true,
 			'menu_position'         => 12,
 			'menu_icon'             => MGTC_URL . "/assets/images/theatre-icon.png",
-			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'supports'              => array( 'title', 'thumbnail' ),
 			'has_archive'           => true
 		);
 

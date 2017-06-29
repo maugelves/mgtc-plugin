@@ -4,6 +4,41 @@
         "title": "Obras",
         "fields": [
             {
+                "key": "field_59552333db76c",
+                "label": "General",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_595524465d5f7",
+                "label": "Descripción",
+                "name": "mgtc_obra_description",
+                "type": "wysiwyg",
+                "instructions": "Desarrolle la descripción completa de la obra",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
                 "key": "field_594d15d6dcca5",
                 "label": "Descripción breve",
                 "name": "mgtc_obra_excerpt",
@@ -21,22 +56,6 @@
                 "maxlength": "",
                 "rows": 3,
                 "new_lines": "br"
-            },
-            {
-                "key": "field_593f612fb1b48",
-                "label": "",
-                "name": "",
-                "type": "row",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "row_type": "row_open",
-                "col_num": 2
             },
             {
                 "key": "field_593f5f12f95bc",
@@ -83,10 +102,10 @@
                 "first_day": 1
             },
             {
-                "key": "field_593f621c86dad",
-                "label": "",
+                "key": "field_5955235ddb76d",
+                "label": "Reparto y Equipo",
                 "name": "",
-                "type": "row",
+                "type": "tab",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -95,8 +114,8 @@
                     "class": "",
                     "id": ""
                 },
-                "row_type": "row_close",
-                "col_num": 2
+                "placement": "top",
+                "endpoint": 0
             },
             {
                 "key": "field_593d4791b36a0",
@@ -203,6 +222,22 @@
                 "delay": 0
             },
             {
+                "key": "field_59552390db76e",
+                "label": "Ficheros y multimedia",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
                 "key": "field_593d617de7285",
                 "label": "Dossier",
                 "name": "mgtc_dossieres_obra",
@@ -234,7 +269,7 @@
                             "class": "",
                             "id": ""
                         },
-                        "return_format": "url",
+                        "return_format": "array",
                         "library": "all",
                         "min_size": "",
                         "max_size": "",
@@ -305,6 +340,22 @@
                 ]
             },
             {
+                "key": "field_595523b4db76f",
+                "label": "Distribución y Prensa",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
                 "key": "field_593d645ce728b",
                 "label": "Distribución",
                 "name": "mgtc_distribucion_obra",
@@ -363,6 +414,22 @@
                 "return_format": "object"
             },
             {
+                "key": "field_59552513bdf74",
+                "label": "Patrocinios",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
                 "key": "field_5952783fbf74d",
                 "label": "Sponsors",
                 "name": "mgtc_obra_sponsors",
@@ -401,7 +468,7 @@
         ],
         "menu_order": 0,
         "position": "normal",
-        "style": "seamless",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": [

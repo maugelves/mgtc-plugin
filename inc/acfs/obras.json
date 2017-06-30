@@ -414,6 +414,80 @@
                 "return_format": "object"
             },
             {
+                "key": "field_5956913a95dfc",
+                "label": "Enlaces de prensa",
+                "name": "mgtc_obra_enlaces_prensa",
+                "type": "flexible_content",
+                "instructions": "Indique los enlaces o documentos de prensa",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5956917583563": {
+                        "key": "5956917583563",
+                        "name": "mgtc_obra_block_enlace_prensa",
+                        "label": "Enlace a prensa Web",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5956919b95dfd",
+                                "label": "Enlace a prensa Web",
+                                "name": "mgtc_obra_enlace_prensa",
+                                "type": "url",
+                                "instructions": "Indique el enlace al artículo",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5956920095dfe": {
+                        "key": "5956920095dfe",
+                        "name": "mgtc_obra_block_enlace_documento",
+                        "label": "Enlace a documento",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5956920d95dff",
+                                "label": "Enlace a documento",
+                                "name": "mgtc_obra_enlace_documento",
+                                "type": "file",
+                                "instructions": "Indique el documento PDF\/JPG con la nota de prensa",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_size": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Agregar Enlace",
+                "min": "",
+                "max": ""
+            },
+            {
                 "key": "field_59552513bdf74",
                 "label": "Patrocinios",
                 "name": "",

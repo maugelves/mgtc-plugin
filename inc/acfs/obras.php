@@ -266,8 +266,8 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array (
 				'key' => 'field_593d617de7285',
-				'label' => 'Dossier',
-				'name' => 'mgtc_dossieres_obra',
+				'label' => 'Descargas',
+				'name' => 'mgtc_descargas_obra',
 				'type' => 'repeater',
 				'instructions' => 'Cargue todos los ficheros que conforman el dossier de la obra',
 				'required' => 0,
@@ -286,7 +286,7 @@ if( function_exists('acf_add_local_field_group') ):
 					array (
 						'key' => 'field_593d61aae7286',
 						'label' => 'Fichero',
-						'name' => 'mgtc_dossier_obra',
+						'name' => 'mgtc_descarga_obra',
 						'type' => 'file',
 						'instructions' => 'Seleccione el fichero',
 						'required' => 1,

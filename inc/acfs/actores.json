@@ -44,11 +44,36 @@
                 "prefix_name": 0
             },
             {
-                "key": "field_59515b2a12ca8",
+                "key": "field_59562d9d50e01",
                 "label": "Galería de fotos del actor",
                 "name": "mgtc_actor_galeria",
+                "type": "gallery",
+                "instructions": "Seleccione las fotos que conformarán la galería del actor.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "min": "",
+                "max": "",
+                "insert": "append",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_595635b38b9f6",
+                "label": "Videos",
+                "name": "mgtc_actor_videos",
                 "type": "repeater",
-                "instructions": "Agregue una galería de fotos de la persona.",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -60,14 +85,14 @@
                 "min": 0,
                 "max": 0,
                 "layout": "table",
-                "button_label": "Agregar foto",
+                "button_label": "Agregar video",
                 "sub_fields": [
                     {
-                        "key": "field_59515b2a1b96f",
-                        "label": "Foto",
-                        "name": "mgtc_actor_galeria_foto",
-                        "type": "image",
-                        "instructions": "Seleccione una foto",
+                        "key": "field_595635c78b9f7",
+                        "label": "Video",
+                        "name": "mgtc_actor_video",
+                        "type": "oembed",
+                        "instructions": "Indique el video de YouTube o Vimeo",
                         "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -75,16 +100,8 @@
                             "class": "",
                             "id": ""
                         },
-                        "return_format": "array",
-                        "preview_size": "thumbnail",
-                        "library": "all",
-                        "min_width": "",
-                        "min_height": "",
-                        "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
-                        "max_size": "",
-                        "mime_types": "jpg,png"
+                        "width": "",
+                        "height": ""
                     }
                 ]
             }

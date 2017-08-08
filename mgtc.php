@@ -25,10 +25,19 @@ include (MGTC_PATH . "/inc/base.php");
 
 /*
 *   =================================================================================================
+*   PHP LIBS
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/inc/libs/*.php") as $filename)
+	include $filename;
+
+
+
+/*
+*   =================================================================================================
 *   PLUGIN DEPENDENCIES
 *   =================================================================================================
 */
-include ( MGTC_PATH . "/inc/libs/class-tgm-plugin-activation.php" );
 add_action( 'tgmpa_register', array( 'MGTC_Base', 'check_plugin_dependencies' ) );
 
 
@@ -79,3 +88,14 @@ foreach (glob(__DIR__ . "/inc/customizer/*.php") as $filename)
 */
 register_activation_hook( __FILE__, array( 'MGTC_Base', 'create_roles_terms' ) );
 register_activation_hook( __FILE__, array( 'MGTC_Base', 'create_giras_page' ) );
+
+
+
+
+/*
+*   =================================================================================================
+*   CLASES
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/inc/classes/*.php") as $filename)
+	include $filename;

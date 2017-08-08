@@ -20,6 +20,25 @@
                 "endpoint": 0
             },
             {
+                "key": "field_5983115bbd391",
+                "label": "Subtítulo",
+                "name": "mgtc_obra_subtitle",
+                "type": "text",
+                "instructions": "Este subtítulo será utilizado en el carrousel de la homepage.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_595524465d5f7",
                 "label": "Descripción",
                 "name": "mgtc_obra_description",
@@ -66,7 +85,7 @@
                 "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
@@ -93,7 +112,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
@@ -142,7 +161,7 @@
                 ],
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             },
             {
                 "key": "field_59516453b9788",
@@ -158,8 +177,6 @@
                     "id": ""
                 },
                 "post_type": [
-                    "personal",
-                    "actor",
                     "actor"
                 ],
                 "taxonomy": [],
@@ -171,7 +188,7 @@
                 ],
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             },
             {
                 "key": "field_593d5f72c162a",
@@ -236,6 +253,30 @@
                 },
                 "placement": "top",
                 "endpoint": 0
+            },
+            {
+                "key": "field_598333c0096fd",
+                "label": "Imagen Destacada",
+                "name": "mgtc_obra_main_picture",
+                "type": "image",
+                "instructions": "Seleccione la imagen que se utilizará para el carrousel y portada de obra.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             },
             {
                 "key": "field_593d617de7285",

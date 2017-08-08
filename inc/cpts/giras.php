@@ -64,44 +64,6 @@ class Giras
 	}
 
 
-	/**
-	 * Returns next dates from the Gira of all the plays
-	 *
-	 * @param   $dates_count    int     Number of dates to return
-     * @param   $obra_id        int     Obra Identifier
-	 * @return  \WP_Query       Returns an array of Gira or false if no dates are found
-	 * @since   1.0.1
-	 */
-	public static function get_next_dates( $dates_count = 10, $obra_id = 0 ){
-
-		$args = array(
-			'order'             => 'ASC',
-			'posts_per_page'    => $dates_count,
-			'post_status'       => 'publish',
-			'post_type'         => 'gira',
-
-
-			'orderby'           => 'meta_value',
-			'meta_type'         => 'DATETIME',
-			'meta_key'          => 'mgtc_fecha_gira'
-		);
-
-		if ( $obra_id != 0 ):
-
-            $args['meta_query'] = array(
-                    'key'   => 'mgtc_gira_obra',
-                    'value' =>  $obra_id,
-                    'compare' => 'LIKE'
-            );
-
-        endif;
-
-		$obras = new \WP_Query( $args );
-
-		return $obras;
-	}
-
-
 
 	function gira_cpt_columns($columns) {
 

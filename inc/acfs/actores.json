@@ -4,6 +4,41 @@
         "title": "Actores",
         "fields": [
             {
+                "key": "field_59887aaaf7194",
+                "label": "General",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_59887c772a487",
+                "label": "¿Mostrar en la página principal?",
+                "name": "mgtc_actor_show_in_frontpage",
+                "type": "true_false",
+                "instructions": "Si la casilla está marcada el actor se mostrará en la página principal de la web.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
                 "key": "field_59515b2a12c49",
                 "label": "Biografía",
                 "name": "mgtc_actor_biografia",
@@ -23,8 +58,24 @@
                 "delay": 0
             },
             {
+                "key": "field_59887abef7195",
+                "label": "Contacto y RRSS",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
                 "key": "field_59515b39cb1dd",
-                "label": "Datos de contacto",
+                "label": "Contacto",
                 "name": "mgtc_actor_contacto",
                 "type": "clone",
                 "instructions": "",
@@ -42,6 +93,22 @@
                 "layout": "block",
                 "prefix_label": 0,
                 "prefix_name": 0
+            },
+            {
+                "key": "field_59887af2f7196",
+                "label": "Multimedia",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
             },
             {
                 "key": "field_59562d9d50e01",
@@ -117,16 +184,18 @@
         ],
         "menu_order": 0,
         "position": "normal",
-        "style": "seamless",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": [
+            "permalink",
             "the_content",
             "excerpt",
             "custom_fields",
             "discussion",
             "comments",
             "revisions",
+            "slug",
             "author",
             "format",
             "page_attributes",

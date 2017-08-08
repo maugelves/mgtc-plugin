@@ -30,7 +30,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'min' => 1,
 				'max' => 1,
-				'return_format' => 'object',
+				'return_format' => 'id',
 			),
 			array (
 				'key' => 'field_593f497e8855f',
@@ -75,7 +75,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'min' => 1,
 				'max' => 1,
-				'return_format' => 'object',
+				'return_format' => 'id',
 			),
 			array (
 				'key' => 'field_593f4a638dc7a',

@@ -161,6 +161,9 @@ class Obra {
 	 * @return null
 	 */
 	public function getDirectors() {
+		if( is_null( $this->directors ) ):
+			$this->directors = Obras::getInstance()->get_directors( $this->getID() );
+		endif;
 		return $this->directors;
 	}
 

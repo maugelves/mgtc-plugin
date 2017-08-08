@@ -217,7 +217,7 @@
                 ],
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             },
             {
                 "key": "field_593d6143e7284",

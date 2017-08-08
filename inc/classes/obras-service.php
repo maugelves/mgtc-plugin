@@ -2,6 +2,7 @@
 
 namespace MGTC\Service;
 
+use MGTC\Models\Equipo;
 use MGTC\Models\Obra;
 
 
@@ -165,6 +166,37 @@ class Obras extends \Singleton {
 
 		// return the array of Actors
 		return $actors;
+	}
+
+
+	/**
+	 * Returns an array of Directors from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_directors( $obra_id ) {
+
+		$directors = array();
+
+		$directors_id = get_field('mgtc_obra_directores', $obra_id );
+
+		if( $directors_id ):
+
+			foreach( $directors_id as $director_id ):
+
+				// Search the actor by Id
+				$director = Equipos::getInstance()->get_by_id( $director_id );
+
+				// Add the actor to the output array
+				if( $director ) array_push( $directors, $director );
+
+			endforeach;
+
+		endif;
+
+		// return the array of Actors
+		return $directors;
 	}
 
 }

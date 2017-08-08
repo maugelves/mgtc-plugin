@@ -222,7 +222,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'min' => '',
 				'max' => '',
-				'return_format' => 'object',
+				'return_format' => 'id',
 			),
 			array (
 				'key' => 'field_593d6143e7284',

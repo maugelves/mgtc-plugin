@@ -35,7 +35,7 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "maugelves",
+                "placeholder": "",
                 "prepend": "",
                 "append": "",
                 "maxlength": 100
@@ -45,7 +45,7 @@
                 "label": "Cuenta de Facebook",
                 "name": "mgtc_contacto_facebook",
                 "type": "text",
-                "instructions": "Indique la cuenta de Facebook de la persona",
+                "instructions": "Indique el enlace a la cuenta de Facebook de la persona.\r\nEj.: https:\/\/www.facebook.com\/maugelvesweb\/",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -54,7 +54,7 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "maugelves",
+                "placeholder": "",
                 "prepend": "",
                 "append": "",
                 "maxlength": 200
@@ -64,7 +64,7 @@
                 "label": "Cuenta de Instagram",
                 "name": "mgtc_contacto_instagram",
                 "type": "text",
-                "instructions": "Indique la cuenta de Instagram de la persona",
+                "instructions": "Indique la cuenta de Instagram de la persona (sin el signo @).",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -73,7 +73,7 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "maugelves",
+                "placeholder": "",
                 "prepend": "",
                 "append": "",
                 "maxlength": 200
@@ -130,7 +130,7 @@
         ],
         "menu_order": 0,
         "position": "normal",
-        "style": "seamless",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": [

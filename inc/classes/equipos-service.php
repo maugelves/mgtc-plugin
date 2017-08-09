@@ -29,6 +29,15 @@ class Equipos extends \Singleton {
 		if( isset( $equipo_meta['mgtc_contacto_facebook'] ) ) $equipo->setFacebook( $equipo_meta['mgtc_contacto_facebook'] );
 		if( isset( $equipo_meta['mgtc_contacto_twitter'] ) ) $equipo->setTwitter( $equipo_meta['mgtc_contacto_twitter'] );
 		if( isset( $equipo_meta['mgtc_contacto_instagram'] ) ) $equipo->setInstagram( $equipo_meta['mgtc_contacto_instagram'] );
+		if( isset( $equipo_meta['mgtc_contacto_telefonos'] ) ):
+			$telefonos = array();
+			if( is_array($equipo_meta['mgtc_contacto_telefonos']) ):
+			foreach( $equipo_meta['mgtc_contacto_telefonos'] as $telefono ):
+				array_push( $telefonos, $telefono['mgtc_contacto_telefono'] );
+			endforeach;
+			endif;
+			$equipo->setTelefonos( $telefonos );
+		endif;
 
 		return $equipo;
 

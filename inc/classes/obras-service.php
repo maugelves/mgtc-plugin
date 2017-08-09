@@ -71,6 +71,7 @@ class Obras extends \Singleton {
 		if( isset( $obra_meta['mgtc_obra_main_picture'] ) ) $obra->setMainPicture( $obra_meta['mgtc_obra_main_picture'] );
 		if( isset( $obra_meta['mgtc_obra_excerpt'] ) ) $obra->setShortDescription( $obra_meta['mgtc_obra_excerpt'] );
 		if( isset( $obra_meta['mgtc_obra_subtitle'] ) ) $obra->setSubtitle( $obra_meta['mgtc_obra_subtitle'] );
+		if( isset( $obra_meta['mgtc_obra_equipo_general'] ) ) $obra->setTeam( $obra_meta['mgtc_obra_equipo_general'] );
 
 		return $obra;
 
@@ -197,6 +198,37 @@ class Obras extends \Singleton {
 
 		// return the array of Actors
 		return $directors;
+	}
+
+
+	/**
+	 * Returns an array of Distributors from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_distributors( $obra_id ) {
+
+		$distributors = array();
+
+		$distributors_id = get_field('mgtc_distribucion_obra', $obra_id );
+
+		if( $distributors_id ):
+
+			foreach( $distributors_id as $distributor_id ):
+
+				// Search the actor by Id
+				$distributor = Equipos::getInstance()->get_by_id( $distributor_id );
+
+				// Add the actor to the output array
+				if( $distributor ) array_push( $distributors, $distributor );
+
+			endforeach;
+
+		endif;
+
+		// return the array of Actors
+		return $distributors;
 	}
 
 }

@@ -450,7 +450,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'min' => '',
 				'max' => '',
-				'return_format' => 'object',
+				'return_format' => 'id',
 			),
 			array (
 				'key' => 'field_594d3690421f8',
@@ -479,7 +479,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'min' => '',
 				'max' => '',
-				'return_format' => 'object',
+				'return_format' => 'id',
 			),
 			array (
 				'key' => 'field_5956913a95dfc',
@@ -597,7 +597,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 				'min' => '',
 				'max' => '',
-				'return_format' => 'object',
+				'return_format' => 'id',
 			),
 		),
 		'location' => array (

@@ -15,6 +15,7 @@ class Equipo {
 	private $twitter            = "";
 	private $facebook           = "";
 	private $instagram          = "";
+	private $telefonos          = array();
 
 
 
@@ -105,6 +106,20 @@ class Equipo {
 	 */
 	public function setInstagram( $instagram ) {
 		$this->instagram = $instagram;
+	}
+
+	/**
+	 * @return null
+	 */
+	public function getTelefonos() {
+		return $this->telefonos;
+	}
+
+	/**
+	 * @param null $telefonos
+	 */
+	public function setTelefonos( $telefonos ) {
+		$this->telefonos = $telefonos;
 	}
 
 }

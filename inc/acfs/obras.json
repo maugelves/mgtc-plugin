@@ -423,7 +423,7 @@
                 ],
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             },
             {
                 "key": "field_594d3690421f8",
@@ -452,7 +452,7 @@
                 ],
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             },
             {
                 "key": "field_5956913a95dfc",
@@ -569,7 +569,7 @@
                 ],
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             }
         ],
         "location": [

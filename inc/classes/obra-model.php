@@ -2,6 +2,7 @@
 
 namespace MGTC\Models;
 
+use MGTC\Service\Equipos;
 use MGTC\Service\Giras;
 use MGTC\Service\Obras;
 
@@ -12,7 +13,7 @@ class Obra {
      * ================================*/
 	private $date_release       = '';
 	private $description        = '';
-	private $distribution       = null; // Team
+	private $distributors       = null; // Team
 	private $directors          = null; //team
 	private $downloads          = array();
 	private $gallery            = array();
@@ -233,15 +234,18 @@ class Obra {
 	/**
 	 * @return null
 	 */
-	public function getDistribution() {
-		return $this->distribution;
+	public function getDistributors() {
+		if( is_null( $this->distributors ) ):
+			$this->distributors = Obras::getInstance()->get_distributors( $this->getID() );
+		endif;
+		return $this->distributors;
 	}
 
 	/**
 	 * @param null $distribution
 	 */
-	public function setDistribution( $distribution ) {
-		$this->distribution = $distribution;
+	public function setDistributors( $distribution ) {
+		$this->distributors = $distribution;
 	}
 
 	/**

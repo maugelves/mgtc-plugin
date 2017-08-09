@@ -339,4 +339,35 @@ class Obras extends \Singleton {
 		return $downloads;
 	}
 
+
+	/**
+	 * Returns an array of Sponsor from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_sponsors( $obra_id ) {
+
+		$sponsors = array();
+
+		$sponsors_id = get_field('mgtc_obra_sponsors', $obra_id );
+
+		if( $sponsors_id ):
+
+			foreach( $sponsors_id as $sponsor_id ):
+
+				// Search the actor by Id
+				$sponsor = Sponsors::getInstance()->get_by_id( $sponsor_id );
+
+				// Add the actor to the output array
+				if( $sponsor ) array_push( $sponsors, $sponsor );
+
+			endforeach;
+
+		endif;
+
+		// return the array of Actors
+		return $sponsors;
+	}
+
 }

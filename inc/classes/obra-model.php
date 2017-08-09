@@ -273,6 +273,9 @@ class Obra {
 	 * @return null
 	 */
 	public function getSponsors() {
+		if( is_null( $this->sponsors ) ):
+			$this->sponsors = Obras::getInstance()->get_sponsors( $this->getID() );
+		endif;
 		return $this->sponsors;
 	}
 

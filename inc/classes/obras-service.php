@@ -231,4 +231,86 @@ class Obras extends \Singleton {
 		return $distributors;
 	}
 
+
+
+	/**
+	 * Returns an array of Press Contacts from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_pressers( $obra_id ) {
+
+		$pressers = array();
+
+		$press_ids = get_field('mgtc_obra_prensa', $obra_id );
+
+		if( $press_ids ):
+
+			foreach( $press_ids as $press_id ):
+
+				// Search the actor by Id
+				$press= Equipos::getInstance()->get_by_id( $press_id );
+
+				// Add the actor to the output array
+				if( $press) array_push( $pressers, $press);
+
+			endforeach;
+
+		endif;
+
+		// return the array of Actors
+		return $pressers;
+	}
+
+
+	/**
+	 * Returns an array of Press Links from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_press_links( $obra_id ) {
+		$presslinks = array();
+
+		// Press Links
+		if( have_rows('mgtc_obra_links_prensa_web', $obra_id ) ):
+
+			while( have_rows('mgtc_obra_links_prensa_web') ): the_row();
+				array_push( $presslinks, array(
+					'name' => get_sub_field('mgtc_obra_nombre_prensa'),
+					'link'  => get_sub_field('mgtc_obra_enlace_prensa')
+				) );
+			endwhile;
+
+		endif;
+
+		return $presslinks;
+	}
+
+
+	/**
+	 * Returns an array of Press Files from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_press_files( $obra_id ) {
+		$presslinks = array();
+
+		// Press Links
+		if( have_rows('mgtc_obra_links_prensa_escrita', $obra_id ) ):
+
+			while( have_rows('mgtc_obra_links_prensa_escrita') ): the_row();
+				array_push( $presslinks, array(
+					'name' => get_sub_field('mgtc_obra_links_prensa_escrita_titulo'),
+					'link'  => get_sub_field('mgtc_obra_links_prensa_escrita_fichero')
+				) );
+			endwhile;
+
+		endif;
+
+		return $presslinks;
+	}
+
 }

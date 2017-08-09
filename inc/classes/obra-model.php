@@ -20,8 +20,9 @@ class Obra {
 	private $ID                 = 0;
 	private $main_actors        = null; //Actor
 	private $main_picture       = false;
-	private $press              = null; // Team
-	private $press_links        = array();
+	private $pressers           = null; // Team
+	private $press_links        = null;
+	private $press_files        = null;
 	private $secondary_actors   = null; //ACtor
 	private $short_description  = '';
 	private $sponsors           = null; // Sponsors
@@ -251,29 +252,18 @@ class Obra {
 	/**
 	 * @return null
 	 */
-	public function getPress() {
-		return $this->press;
+	public function getPressers() {
+		if( is_null ( $this->pressers ) ):
+			$this->pressers = Obras::getInstance()->get_pressers( $this->getID() );
+		endif;
+		return $this->pressers;
 	}
 
 	/**
 	 * @param null $press
 	 */
 	public function setPress( $press ) {
-		$this->press = $press;
-	}
-
-	/**
-	 * @return array
-	 */
-	public function getPressLinks() {
-		return $this->press_links;
-	}
-
-	/**
-	 * @param array $press_links
-	 */
-	public function setPressLinks( $press_links ) {
-		$this->press_links = $press_links;
+		$this->pressers = $press;
 	}
 
 	/**
@@ -333,6 +323,41 @@ class Obra {
 	 */
 	public function setGiras( $giras ) {
 		$this->giras = $giras;
+	}
+
+
+	/**
+	 * @return array
+	 */
+	public function getPressLinks() {
+		if( is_null( $this->press_links ) ):
+			$this->press_links = Obras::getInstance()->get_press_links( $this->getID() );
+		endif;
+		return $this->press_links;
+	}
+
+	/**
+	 * @param array $press_links
+	 */
+	public function setPressLinks( $press_links ) {
+		$this->press_links = $press_links;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getPressFiles() {
+		if( is_null( $this->press_files ) ):
+			$this->press_files = Obras::getInstance()->get_press_files( $this->getID() );
+		endif;
+		return $this->press_files;
+	}
+
+	/**
+	 * @param array $press_files
+	 */
+	public function setPressFiles( $press_files ) {
+		$this->press_files = $press_files;
 	}
 
 }

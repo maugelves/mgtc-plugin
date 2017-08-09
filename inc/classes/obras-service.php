@@ -2,7 +2,7 @@
 
 namespace MGTC\Service;
 
-use MGTC\Models\Equipo;
+use MGSPP\Service\Sponsors;
 use MGTC\Models\Obra;
 
 
@@ -347,6 +347,8 @@ class Obras extends \Singleton {
 	 * @return array
 	 */
 	public function get_sponsors( $obra_id ) {
+
+		if( !class_exists('MGSPP\Service\Sponsors') ) return array();
 
 		$sponsors = array();
 

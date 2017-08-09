@@ -15,7 +15,7 @@ class Obra {
 	private $description        = '';
 	private $distributors       = null; // Team
 	private $directors          = null; //team
-	private $downloads          = array();
+	private $downloads          = null;
 	private $gallery            = array();
 	private $ID                 = 0;
 	private $main_actors        = null; //Actor
@@ -194,6 +194,9 @@ class Obra {
 	 * @return array
 	 */
 	public function getDownloads() {
+		if( is_null( $this->downloads ) ):
+			$this->downloads = Obras::getInstance()->get_download_files( $this->getID() );
+		endif;
 		return $this->downloads;
 	}
 

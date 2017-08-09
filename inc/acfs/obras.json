@@ -298,6 +298,25 @@
                 "button_label": "Agregar fichero",
                 "sub_fields": [
                     {
+                        "key": "field_598ad278512e5",
+                        "label": "Nombre del fichero",
+                        "name": "mgtc_descarga_obra_title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
                         "key": "field_593d61aae7286",
                         "label": "Fichero",
                         "name": "mgtc_descarga_obra",
@@ -310,7 +329,7 @@
                             "class": "",
                             "id": ""
                         },
-                        "return_format": "array",
+                        "return_format": "url",
                         "library": "all",
                         "min_size": "",
                         "max_size": "",

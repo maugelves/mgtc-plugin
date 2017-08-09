@@ -313,4 +313,30 @@ class Obras extends \Singleton {
 		return $presslinks;
 	}
 
+
+
+	/**
+	 * Returns an array of Download Files from an Obra
+	 *
+	 * @param int $obra_id      Obra Identifier
+	 * @return array
+	 */
+	public function get_download_files( $obra_id ) {
+		$downloads = array();
+
+		// Press Links
+		if( have_rows('mgtc_descargas_obra', $obra_id ) ):
+
+			while( have_rows('mgtc_descargas_obra') ): the_row();
+				array_push( $downloads, array(
+					'name' => get_sub_field('mgtc_descarga_obra_title'),
+					'link'  => get_sub_field('mgtc_descarga_obra')
+				) );
+			endwhile;
+
+		endif;
+
+		return $downloads;
+	}
+
 }

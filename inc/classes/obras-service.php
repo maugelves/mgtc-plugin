@@ -19,7 +19,7 @@ class Obras extends \Singleton {
 	 */
 	public function get_active_obras( $post_count = 0 ) {
 
-		$obras = array();
+		//$obras = array();
 
 		$args = array(
 			'meta_key'      => 'mgtc_estado_obra',
@@ -32,20 +32,34 @@ class Obras extends \Singleton {
 			$args['posts_per_page'] = $post_count;
 		endif;
 
-		$query = new \WP_Query( $args );
+		return $this->get_obras( $args );
 
-		if( $query->have_posts() ):
+	}
 
-			while( $query->have_posts() ):
-				$query->the_post();
+	/**
+	 * Returns an array with all the unactive Obras
+	 *
+	 * @author  Mauricio Gelves
+	 * @param   $post_count     int     How many unactive obras return?
+	 * @return  array|false
+	 * @since   1.0
+	 */
+	public function get_unactive_obras( $post_count = 0 ) {
 
-				array_push( $obras, $this->get_obra_from_post( $query->post ) );
+		//$obras = array();
 
-			endwhile;
+		$args = array(
+			'meta_key'      => 'mgtc_estado_obra',
+			'meta_value'    => 'historial',
+			'post_status'   => 'publish',
+			'post_type'     => 'obra'
+		);
 
+		if( $post_count != 0 && is_numeric( $post_count ) ):
+			$args['posts_per_page'] = $post_count;
 		endif;
 
-		return $obras;
+		return $this->get_obras( $args );
 
 	}
 
@@ -74,6 +88,33 @@ class Obras extends \Singleton {
 		if( isset( $obra_meta['mgtc_obra_equipo_general'] ) ) $obra->setTeam( $obra_meta['mgtc_obra_equipo_general'] );
 
 		return $obra;
+
+	}
+
+	/**
+	 * Return an array of Obras
+	 *
+	 * @param $args array   Array of WP_Query parameters
+	 * @return array
+	 */
+	public function get_obras( $args ){
+
+		$obras = array();
+
+		$query = new \WP_Query( $args );
+
+		if( $query->have_posts() ):
+
+			while( $query->have_posts() ):
+				$query->the_post();
+
+				array_push( $obras, $this->get_obra_from_post( $query->post ) );
+
+			endwhile;
+
+		endif;
+
+		return $obras;
 
 	}
 
@@ -312,7 +353,6 @@ class Obras extends \Singleton {
 
 		return $presslinks;
 	}
-
 
 
 	/**

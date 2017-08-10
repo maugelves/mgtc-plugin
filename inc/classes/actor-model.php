@@ -3,6 +3,8 @@
 
 namespace MGTC\Models;
 
+use MGTC\Service\Obras;
+
 class Actor {
 
 	/* =================================
@@ -17,7 +19,7 @@ class Actor {
 	private $twitter            = "";
 	private $facebook           = "";
 	private $instagram          = "";
-
+	private $my_obras           = null;
 
 
 
@@ -136,5 +138,129 @@ class Actor {
 	public function setInstagram( $instagram ) {
 		$this->instagram = $instagram;
 	}
+
+	/**
+	 * @return array
+	 */
+	public function get_obras() {
+		if( is_null( $this->my_obras ) ):
+
+			$args = array(
+				'post_type' => 'obra',
+				'post_status' => 'publish',
+				'meta_query' => array(
+					'relation' => 'OR',
+					array(
+						'key'     => 'mgtc_obra_actores_principales',
+						'value'   => $this->getID(),
+						'compare' => 'LIKE',
+					),
+					array(
+						'key'     => 'mgtc_obra_actores_secundarios',
+						'value'   => $this->getID(),
+						'compare' => 'LIKE',
+					),
+				),
+			);
+
+			$this->my_obras = Obras::getInstance()->get_obras( $args );
+
+		endif;
+		return $this->my_obras;
+	}
+
+	/**
+	 * @param null $my_obras
+	 */
+	public function set_my_obras( $my_obras ) {
+		$this->my_obras = $my_obras;
+	}
+
+
+
+
+
+	/* =================================
+     * METHODS
+     * ================================*/
+	/**
+	 * render the Actor Social Networks
+	 */
+	public function the_rrss() {
+
+		if(
+			empty( $this->getInstagram() )
+			&& empty( $this->getFacebook() )
+			&& empty( $this->getTwitter() )
+		)
+			return;
+
+		?>
+		<div class="mgtcactorsn">
+
+			<h2 class="mgtcactorsn__h">Sus redes sociales</h2>
+			<ul class="mgtcactorsn__items">
+
+			<?php if( !empty( $this->getFacebook() ) ): ?>
+				<li class="mgtcactorsn__item"><a href="<?php echo $this->getFacebook(); ?>"><span class="icon-facebook"></span></a></li>
+			<?php endif; ?>
+
+
+			<?php if( !empty( $this->getTwitter() ) ): ?>
+				<li class="mgtcactorsn__item"><a href="https://twitter.com/<?php echo $this->getTwitter(); ?>"><span class="icon-twitter"></span></a></li>
+			<?php endif; ?>
+
+
+			<?php if( !empty( $this->getInstagram() ) ): ?>
+				<li class="mgtcactorsn__item"><a href="https://instagram.com/<?php echo $this->getInstagram(); ?>"><span class="icon-instagram"></span></a></li>
+			<?php endif; ?>
+
+			</ul>
+
+		</div>
+	<?php }
+
+
+	/**
+	 * Render the Actor Obras where he/she plays
+	 */
+	public function the_obras() {
+
+		if( !empty( $this->get_obras() ) ): ?>
+			<div class="mgtcalsoplaysin">
+				<h2 class="mgtcalsoplaysin__h">Participa en</h2>
+				<ul class="mgtcalsoplaysin__items">
+
+				<?php foreach(  $this->get_obras() as $obra ): /** @var $obra Obra */ ?>
+
+					<li class="mgtcalsoplaysin__item" onclick="location.href ='<?php echo get_permalink( $obra->getID() ); ?>'">
+						<?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'mgtcalsoplaysin__item__fi'] ); ?>
+						<a class="mgtcalsoplaysin__item__h" href="<?php echo get_permalink( $obra->getID() ); ?>"><?php echo $obra->getTitle() ?></a>
+					</li>
+
+				<?php endforeach; ?>
+
+				</ul>
+			</div>
+
+		<?php endif;
+
+	}
+
+
+	/**
+	 * Renders the Actor Twitter Timeline
+	 */
+	public function the_twitter_timeline() {
+
+		// Check the actor has a Twitter Account
+		if( !empty( $this->getTwitter() ) ): ?>
+			<div class="mgtcactortwittertml">
+				<a class="twitter-timeline" href="https://twitter.com/<?php echo $this->getTwitter(); ?>" data-dnt="true" data-tweet-limit="2" data-border-color="#d1d1d1" data-link-color="#A51D21">Tweets de @<?php echo $this->getTwitter(); ?></a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		<?php endif; ?>
+
+	<?php }
 
 }
